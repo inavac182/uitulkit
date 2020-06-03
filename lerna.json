@@ -1,0 +1,22 @@
+{
+  "command": {
+    "publish": {
+      "ignoreChanges": ["*.md"],
+      "message": "chore(release): publish"
+    },
+    "bootstrap": {
+      "parallel": true
+    },
+    "clean": {
+      "include-filtered-dependencies": true,
+      "yes": true
+    },
+    "run": {
+      "stream": true
+    }
+  },
+  "packages": [
+    "packages/*"
+  ],
+  "version": "independent"
+}

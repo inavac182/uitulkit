@@ -11,7 +11,8 @@ module.exports = {
       [
         'button',
         'card',
-        'chore'
+        'misc',
+        'release',
       ]
     ]
   }
