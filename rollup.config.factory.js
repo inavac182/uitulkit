@@ -16,13 +16,13 @@ export function getConfig(pkg, input = []) {
     {
       dir: './dist',
       entryFileNames: '[name].js',
-      format: 'cjs',
+      format: 'cjs'
     },
     {
       dir: './dist',
       entryFileNames: '[name].esm.js',
-      format: 'esm',
-    },
+      format: 'esm'
+    }
   ];
 
   return {
@@ -33,15 +33,15 @@ export function getConfig(pkg, input = []) {
       ...Object.keys(pkg.devDependencies || {}),
       ...Object.keys(pkg.peerDependencies || {}),
       ...Object.keys(rootPkg.dependencies || {}),
-      ...Object.keys(rootPkg.devDependencies || {}),
+      ...Object.keys(rootPkg.devDependencies || {})
     ],
     plugins: [
       nodeResolve(),
       typescript2({
         typescript: require('typescript'),
-        tsconfig,
+        tsconfig
       }),
-      sizeSnapshot(),
-    ],
+      sizeSnapshot()
+    ]
   };
 }
