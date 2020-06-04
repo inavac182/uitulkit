@@ -1,8 +1,8 @@
 {
   "author": "github.com/inavac182",
-  "name": "@uitulkit/typography",
-  "version": "1.0.1",
-  "description": "Actionable component from uitulkit package",
+  "name": "@uitulkit/card",
+  "version": "1.0.0",
+  "description": "Card box for displaying text",
   "license": "ISC",
   "homepage": "https://http://uitulkit.com/",
   "main": "./dist/index.js",
@@ -18,6 +18,9 @@
     "type": "git",
     "url": "git+https://github.com/inavac182/uitulkit.git"
   },
+  "dependencies": {
+    "@uitulkit/typography": "^1.0.0"
+  },
   "keywords": [
     "button"
   ],
@@ -25,6 +28,7 @@
     "url": "https://github.com/inavac182/uitulkit/issues"
   },
   "files": [
-    "dist"
+    "dist",
+    "CHANGELOG.md"
   ]
 }

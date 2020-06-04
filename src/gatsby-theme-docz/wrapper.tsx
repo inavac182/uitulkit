@@ -1,4 +1,4 @@
 import * as React from 'react';
-import './style.css';
+import './styles.css';
 
 export default ({ children }) => <>{children}</>;

@@ -5,7 +5,7 @@
   "scripts": {
     "build": "npm run build:packages",
     "build:packages": "lerna run build",
-    "clean": "lerna run clean",
+    "clean": "lerna run clean && rm -rf .cache .docz",
     "eslint": "eslint .",
     "eslint:fix": "eslint . --fix",
     "jest": "jest --colors --silent",
@@ -13,6 +13,7 @@
     "prebuild": "npm run clean",
     "pretest": "npm run build && npm run lint",
     "publish": "lerna publish --contents dist",
+    "start:docz": "yarn run clean && yarn docz dev",
     "stylelint": "stylelint 'packages/**/*.less' -s less",
     "stylelint:fix": "stylelint 'packages/**/*.less' -s less --fix",
     "test": "npm run jest",

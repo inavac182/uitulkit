@@ -7,16 +7,12 @@ const fontWeights = {
   bold: 600
 };
 
-interface FontWeightProps {
-  fontWeight: string;
-}
-
 const baseStyles = css`
   font-family ${fontFamily};
   margin: 0;
   padding: 0; 
   -webkit-font-smoothing: antialiased;
-  font-weight: ${({ fontWeight }: FontWeightProps) => fontWeights[fontWeight] || fontWeights.regular};
+  font-weight: ${({ fontWeight }: any) => fontWeights[fontWeight] || fontWeights.regular};
 `;
 
 export const H1 = styled.h1`
