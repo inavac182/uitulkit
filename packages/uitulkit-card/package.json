@@ -1,18 +1,21 @@
 {
   "author": "github.com/inavac182",
-  "name": "uitulkit-card",
+  "name": "@uitulkit/card",
   "version": "1.0.1-alpha.0",
   "description": "Card to display content from uitulkit package",
   "license": "ISC",
   "homepage": "https://http://uitulkit.com/",
   "main": "./dist/index.js",
-  "module": "./dist/index.esm.js",
+  "module": "./src/index.ts",
   "types": "./dist/index.d.ts",
   "scripts": {
     "test": "test",
     "clean": "rimraf dist",
     "build": "rollup -c",
     "dev": "rollup -c -w"
+  },
+  "dependencies": {
+    "@uitulkit/typography": "^1.0.0"
   },
   "repository": {
     "type": "git",
@@ -25,10 +28,6 @@
     "url": "https://github.com/inavac182/uitulkit/issues"
   },
   "files": [
-    "dist",
-    "styles"
-  ],
-  "peerDependencies": {
-    "react": "^16.3.2"
-  }
+    "dist"
+  ]
 }

@@ -1,9 +1,5 @@
 {
   "command": {
-    "publish": {
-      "ignoreChanges": ["*.md"],
-      "message": "chore(release): publish"
-    },
     "bootstrap": {
       "parallel": true
     },
@@ -11,12 +7,22 @@
       "include-filtered-dependencies": true,
       "yes": true
     },
+    "publish": {
+      "allowBranch": "master",
+      "ignoreChanges": ["*.md", "**/test/**"],
+      "message": "chore(release): publish"
+    },
     "run": {
       "stream": true
+    },
+    "version": {
+      "allowBranch": "master"
     }
   },
+  "npmClient": "yarn",
   "packages": [
     "packages/*"
   ],
+  "useWorkspaces": true,
   "version": "independent"
 }
