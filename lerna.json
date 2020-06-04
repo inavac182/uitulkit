@@ -10,7 +10,7 @@
     "publish": {
       "allowBranch": "master",
       "ignoreChanges": ["*.md", "**/test/**"],
-      "message": "chore(release): publish"
+      "message": "chore(release): publish"      
     },
     "run": {
       "stream": true
@@ -23,6 +23,9 @@
   "packages": [
     "packages/*"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "useWorkspaces": true,
   "version": "independent"
 }

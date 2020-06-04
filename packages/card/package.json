@@ -1,7 +1,7 @@
 {
   "author": "github.com/inavac182",
   "name": "@uitulkit/card",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Card box for displaying text",
   "license": "ISC",
   "homepage": "https://http://uitulkit.com/",
@@ -19,7 +19,7 @@
     "url": "git+https://github.com/inavac182/uitulkit.git"
   },
   "dependencies": {
-    "@uitulkit/typography": "^1.0.3"
+    "@uitulkit/typography": "^1.0.4"
   },
   "keywords": [
     "button"
