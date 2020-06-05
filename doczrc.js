@@ -6,13 +6,13 @@ export default {
   themeConfig: {
     styles: {
       h1: {
-        fontFamily: fontFamily
+        fontFamily
       },
       h2: {
-        fontFamily: fontFamily
+        fontFamily
       },
       body: {
-        fontFamily: fontFamily
+        fontFamily
       }
     }
   }

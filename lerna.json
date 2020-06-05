@@ -10,10 +10,7 @@
     "publish": {
       "allowBranch": "master",
       "ignoreChanges": ["*.md", "**/test/**"],
-      "message": "chore(release): publish",
-      "publishConfig": {
-        "access": "public"
-      }
+      "message": "chore(release): publish"
     },
     "run": {
       "stream": true

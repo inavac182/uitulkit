@@ -3,20 +3,18 @@
   "description": "React ui components to create beautiful user interfaces",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build:packages",
-    "build:packages": "lerna run build",
+    "build": "yarn lint && lerna run build",
     "clean": "lerna run clean && rm -rf .cache .docz",
     "eslint": "eslint .",
     "eslint:fix": "eslint . --fix",
     "jest": "jest --colors --silent",
-    "lint": "npm run stylelint && npm run eslint && npm run typecheck && npm run tslint",
-    "prebuild": "npm run clean",
-    "pretest": "npm run build && npm run lint",
-    "publish": "lerna publish --contents dist",
+    "lint": "yarn lint:styles && yarn eslint",
+    "prebuild": "yarn clean",
+    "pretest": "yarn build && yarn run lint",
+    "publish": "yarn build && lerna publish --contents dist",
     "start:docz": "yarn run clean && yarn docz dev",
-    "stylelint": "stylelint 'packages/**/*.less' -s less",
-    "stylelint:fix": "stylelint 'packages/**/*.less' -s less --fix",
-    "test": "npm run jest",
+    "lint:styles":"stylelint ./packages/**/*.tsx",
+    "test": "jest",
     "tslint": "tslint --project ./tsconfig.json --format stylish",
     "tslint:fix": "tslint --project ./tsconfig.json --format stylish --fix",
     "typecheck": "tsc --project tsconfig.json --noEmit"
@@ -32,6 +30,9 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/inavac182/uitulkit/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "homepage": "https://http://uitulkit.com/",
   "dependencies": {
@@ -96,9 +97,12 @@
     "rollup-plugin-typescript2": "^0.27.1",
     "source-map-loader": "^0.2.4",
     "style-loader": "^1.1.3",
+    "styled-components": "^5.1.1",
     "stylelint": "^13.5.0",
     "stylelint-config-standard": "^20.0.0",
-    "styled-components": "^5.1.1",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0",
     "ts-jest": "^25.2.1",
     "ts-loader": "^6.2.1",
     "typescript": "^3.8.3",
