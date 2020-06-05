@@ -23,7 +23,7 @@
   "packages": [
     "packages/*"
   ],
-  "publishConfig": {
+  "publicConfig": {
     "access": "public"
   },
   "useWorkspaces": true,

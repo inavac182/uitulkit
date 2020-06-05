@@ -1,7 +1,7 @@
 {
   "author": "github.com/inavac182",
   "name": "@uitulkit/typography",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Actionable component from uitulkit package",
   "license": "ISC",
   "homepage": "https://http://uitulkit.com/",
@@ -27,5 +27,6 @@
   "files": [
     "dist",
     "CHANGELOG.md"
-  ]
+  ],
+  "gitHead": "d73f0289caab91d582cf4d8607a24e1cb9a54789"
 }
