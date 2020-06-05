@@ -11,7 +11,7 @@
     "lint": "yarn lint:styles && yarn eslint",
     "prebuild": "yarn clean",
     "pretest": "yarn build && yarn run lint",
-    "publish": "yarn build && lerna publish --contents dist",
+    "publish": "yarn build && lerna publish",
     "start:docz": "yarn run clean && yarn docz dev",
     "lint:styles":"stylelint ./packages/**/*.tsx",
     "test": "jest",
@@ -30,9 +30,6 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/inavac182/uitulkit/issues"
-  },
-  "publishConfig": {
-    "access": "public"
   },
   "homepage": "https://http://uitulkit.com/",
   "dependencies": {

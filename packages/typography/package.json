@@ -28,5 +28,8 @@
     "dist",
     "CHANGELOG.md"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "gitHead": "0d2e7f178ed2a9815f1c6d7d26173f57758a4990"
 }
