@@ -1,9 +1,28 @@
 {
   "extends": "../../tsconfig.json",
-
   "compilerOptions": {
     "outDir": "dist",
-    "jsx": "react"
+    "jsx": "react",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "strict": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
   },
-  "exclude": ["__tests__", "coverage", "node_modules", "dist"]
+  "exclude": [
+    "coverage",
+    "node_modules",
+    "dist",
+    "__tests__"
+  ],
+  "include": [
+    "src"
+  ]
 }

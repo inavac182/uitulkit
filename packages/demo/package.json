@@ -11,11 +11,23 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "clean": " rm -rf lib node_modules",
+    "clean": " rm -rf dist node_modules",
     "tsc": "tsc",
     "eslint": "eslint ./src/**/*.{ts,tsx} --fix",
     "lint:styles": "stylelint ./src/**/*.tsx",
     "lint": "npm run lint:styles && npm run tsc && npm run eslint",
     "test": "jest"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

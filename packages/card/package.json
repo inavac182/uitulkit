@@ -9,9 +9,9 @@
     "dist"
   ],
   "main": "dist/index",
-  "types": "dist/index",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "clean": " rm -rf lib node_modules",
+    "clean": " rm -rf dist node_modules",
     "tsc": "tsc",
     "watch": "tsc --watch",
     "eslint": "eslint ./src/**/*.{ts,tsx} --fix",
