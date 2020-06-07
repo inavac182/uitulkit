@@ -1,38 +1,27 @@
 {
-  "author": "github.com/inavac182",
   "name": "@uitulkit/card",
-  "version": "1.0.9",
-  "description": "Card box for displaying text",
-  "license": "ISC",
-  "homepage": "https://http://uitulkit.com/",
-  "main": "./dist/index.js",
-  "module": "./src/index.ts",
-  "types": "./dist/index.d.ts",
-  "scripts": {
-    "test": "test",
-    "clean": "rimraf dist",
-    "build": "rollup -c",
-    "dev": "rollup -c -w"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/inavac182/uitulkit.git"
-  },
-  "dependencies": {
-    "@uitulkit/typography": "^1.0.10"
-  },
-  "keywords": [
-    "button"
-  ],
-  "bugs": {
-    "url": "https://github.com/inavac182/uitulkit/issues"
-  },
+  "description": "Card component from @uitulkit library",
+  "respository": "https://github.com/inavac182/uitulkit",
+  "license": "MIT",
+  "version": "0.1.0",
+  "private": false,
   "files": [
-    "dist",
-    "CHANGELOG.md"
+    "dist"
   ],
-  "publishConfig": {
-    "access": "public"
+  "main": "dist/index",
+  "types": "dist/index",
+  "scripts": {
+    "clean": " rm -rf lib node_modules",
+    "tsc": "tsc",
+    "watch": "tsc --watch",
+    "eslint": "eslint ./src/**/*.{ts,tsx} --fix",
+    "lint:styles": "stylelint ./src/**/*.tsx",
+    "lint": "npm run lint:styles && npm run tsc && npm run eslint",
+    "test": "jest"
   },
-  "gitHead": "0d2e7f178ed2a9815f1c6d7d26173f57758a4990"
+  "dependencies": {},
+  "peerDependencies": {
+    "react": ">= 16.8.0 < 17",
+    "react-dom": ">= 16.8.0 < 17"
+  }
 }

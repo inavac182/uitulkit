@@ -1,0 +1,21 @@
+{
+  "name": "uitulkit-demo",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@uitulkit/card": "^0.1.0"
+  },
+  "devDependencies": {
+    "react-scripts": "3.4.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "clean": " rm -rf lib node_modules",
+    "tsc": "tsc",
+    "eslint": "eslint ./src/**/*.{ts,tsx} --fix",
+    "lint:styles": "stylelint ./src/**/*.tsx",
+    "lint": "npm run lint:styles && npm run tsc && npm run eslint",
+    "test": "jest"
+  }
+}

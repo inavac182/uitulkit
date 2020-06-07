@@ -1,11 +1,9 @@
 {
   "extends": [
-    "xo-space/esnext",
-    "xo/esnext",
-		"xo-react",
+    "eslint:recommended",
     "plugin:react/recommended",
     "prettier",
-    "plugin:cypress/recommended"
+    "plugin:prettier/recommended"
   ],
   "plugins": [
     "react",
@@ -18,8 +16,19 @@
     "jest": true,
     "browser": true
   },
-  "rules": {
-    "prettier/prettier": ["error", { "singleQuote": true }],
-    "react/no-unescaped-entities": 0
+  "rules" : {
+    "no-unused-vars" : 2,
+    "no-undef" : 2,
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error"
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "parser": "babel-eslint",
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }
