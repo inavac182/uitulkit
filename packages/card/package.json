@@ -19,7 +19,6 @@
     "lint": "npm run lint:styles && npm run tsc && npm run eslint",
     "test": "jest"
   },
-  "dependencies": {},
   "peerDependencies": {
     "react": ">= 16.8.0 < 17",
     "react-dom": ">= 16.8.0 < 17"
