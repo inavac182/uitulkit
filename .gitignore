@@ -107,3 +107,4 @@ dist
 .docz/
 packages/demo/build/
 .firebaserc
+.firebase/
