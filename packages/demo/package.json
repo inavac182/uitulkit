@@ -5,11 +5,9 @@
   "dependencies": {
     "@uitulkit/card": "^0.1.0"
   },
-  "devDependencies": {
-    "react-scripts": "3.4.1"
-  },
   "scripts": {
     "start": "react-scripts start",
+    "watch": "react-scripts start",
     "build": "react-scripts build",
     "clean": " rm -rf dist node_modules",
     "tsc": "tsc",
