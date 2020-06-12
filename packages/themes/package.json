@@ -1,0 +1,21 @@
+{
+  "name": "@uitulkit/themes",
+  "description": "Themes values for @uitulkit library",
+  "respository": "https://github.com/inavac182/uitulkit",
+  "license": "MIT",
+  "version": "0.1.0",
+  "private": false,
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "clean": " rm -rf dist node_modules coverage",
+    "tsc": "tsc",
+    "watch": "tsc --watch",
+    "eslint": "eslint ./src/**/*.ts --fix",
+    "lint": "npm run tsc && npm run eslint"
+  },
+  "dependencies": {}
+}

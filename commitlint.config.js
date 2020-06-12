@@ -13,6 +13,8 @@ module.exports = {
         'card',
         'misc',
         'release',
+        'themes',
+        'grid'
       ]
     ]
   }
