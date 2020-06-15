@@ -14,7 +14,8 @@ module.exports = {
         'misc',
         'release',
         'themes',
-        'grid'
+        'grid',
+        'foundation'
       ]
     ]
   }

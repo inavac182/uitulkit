@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import * as Themes from '@uitulkit/themes';
+import { themes } from '@uitulkit/foundation';
 
 interface UiTulkitCardProps {
   text: string;
@@ -12,9 +12,9 @@ const Div = styled.div`
   width: 100%;
   border-radius: 3px;
 
-  background: ${(props) => Themes[props.theme.main].Colors.softBg};
-  color: ${(props) => Themes[props.theme.main].Colors.soft};
-  border: 2px solid ${(props) => Themes[props.theme.main].Colors.contrast};
+  background: ${(props) => themes[props.theme.main].Colors.softBg};
+  color: ${(props) => themes[props.theme.main].Colors.soft};
+  border: 2px solid ${(props) => themes[props.theme.main].Colors.contrast};
 `;
 
 Div.defaultProps = {

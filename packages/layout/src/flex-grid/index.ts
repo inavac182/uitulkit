@@ -1,2 +1,2 @@
-export * from './grid';
 export * from './flex-grid';
+export * from './flex-item';

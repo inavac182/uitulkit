@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "@types/styled-components": "^5.1.0",
-    "@uitulkit/themes": "^0.1.0",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "@uitulkit/foundation": "^0.1.0"
   }
 }

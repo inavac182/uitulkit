@@ -6,7 +6,7 @@
     "paths": {
       "@uitulkit/card": ["card/src"],
       "@uitulkit/layoutgrid": ["grid/src"],
-      "@uitulkit/themes": ["themes/src"],
+      "@uitulkit/foundation": ["foundation/src"],
       "@uitulkit/*": ["*/src"]
     }
   }

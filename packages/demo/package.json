@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@uitulkit/card": "^0.1.0",
-    "@uitulkit/themes": "^0.1.0",
+    "@uitulkit/foundation": "^0.1.0",
     "@uitulkit/layoutgrid": "^0.1.0",
     "@types/styled-components": "^5.1.0",
     "styled-components": "^5.1.1"
