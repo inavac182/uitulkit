@@ -28,9 +28,9 @@ export const App = () => {
           <img src={logo} className="App-logo" alt="logo" />
           <UiTulkitCard text="Hey!" />
         </header>
-        <UiTulkitFlexGrid>
-          <UiTulkitFlexItem size={1}>Hey 1!</UiTulkitFlexItem>
-          <UiTulkitFlexItem size={{ s: 2 }}>Hey 2!</UiTulkitFlexItem>
+        <UiTulkitFlexGrid height="200px">
+          <UiTulkitFlexItem size={2}>Hey 1!</UiTulkitFlexItem>
+          <UiTulkitFlexItem size={{ s: 2, m: 3, l: 4 }}>Hey 2!</UiTulkitFlexItem>
           <UiTulkitFlexItem params={{ collapse: 's' }}>Hey 3!</UiTulkitFlexItem>
         </UiTulkitFlexGrid>
       </div>
