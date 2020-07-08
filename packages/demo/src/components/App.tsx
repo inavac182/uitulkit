@@ -9,14 +9,11 @@ import { UiTulkitFlexGrid, UiTulkitFlexItem } from '@uitulkit/layoutgrid';
 export const App = () => {
   const [theme, setTheme] = React.useState('dark');
 
-  const changeTheme = React.useCallback(
-    (e) => {
-      if (e && e.target && e.target.value) {
-        setTheme(e.target.value);
-      }
-    },
-    [theme]
-  );
+  const changeTheme = React.useCallback((e) => {
+    if (e && e.target && e.target.value) {
+      setTheme(e.target.value);
+    }
+  }, []);
 
   return (
     <ThemeProvider theme={{ main: theme }}>
@@ -32,9 +29,9 @@ export const App = () => {
           <UiTulkitCard text="Hey!" />
         </header>
         <UiTulkitFlexGrid>
-          <UiTulkitFlexItem>Hey 1!</UiTulkitFlexItem>
+          <UiTulkitFlexItem size={1}>Hey 1!</UiTulkitFlexItem>
           <UiTulkitFlexItem size={{ s: 2 }}>Hey 2!</UiTulkitFlexItem>
-          <UiTulkitFlexItem params={{ collapse: 'xs' }}>Hey 3!</UiTulkitFlexItem>
+          <UiTulkitFlexItem params={{ collapse: 's' }}>Hey 3!</UiTulkitFlexItem>
         </UiTulkitFlexGrid>
       </div>
     </ThemeProvider>

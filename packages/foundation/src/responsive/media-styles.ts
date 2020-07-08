@@ -2,23 +2,34 @@ import { breakpoints } from '.';
 
 export const mediaQueries = {
   s: (styles: string) => `
-    @media only screen and (max-width: ${breakpoints.s.max}) {
+    @media (max-width: ${breakpoints.s.max}px) {
       ${styles}
     }
   `,
   m: (styles: string) => `
-    @media only screen and (min-width: ${breakpoints.m.min}) and (max-width: ${breakpoints.m.max}) {
+    @media (min-width: ${breakpoints.m.min}px) and (max-width: ${breakpoints.m.max}px) {
       ${styles}
     }
   `,
   l: (styles: string) => `
-  @media only screen and (min-width: ${breakpoints.l.min}) and (max-width: ${breakpoints.l.max}) {
+  @media (min-width: ${breakpoints.l.min}px) and (max-width: ${breakpoints.l.max}px) {
     ${styles}
   }
 `,
   xl: (styles: string) => `
-  @media only screen and (min-width: ${breakpoints.xl.min}) {
+  @media (min-width: ${breakpoints.xl.min}px) {
     ${styles}
   }
 `,
+};
+
+export const styledMediaQueriesForBreakpointList = (breakpoints: string, style: string): string => {
+  const breakpointList = breakpoints.split('|');
+  let mediaQueriesStyles = '';
+
+  breakpointList.map((breakpoint) => {
+    mediaQueriesStyles += mediaQueries[breakpoint](style);
+  });
+
+  return mediaQueriesStyles;
 };

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { mediaQueries, BreakpointsObject } from '@uitulkit/foundation';
+import { mediaQueries, BreakpointsObject, styledMediaQueriesForBreakpointList } from '@uitulkit/foundation';
 import { isNumber } from 'util';
 
 interface UiTulkitFlexItemProps {
@@ -11,11 +11,19 @@ interface UiTulkitFlexItemProps {
 
 interface UiTulkitFlexItemParams {
   collapse?: string;
+  order?: number;
+  shrink?: number;
+  basis?: string;
+  alignSelf?: string;
 }
 
 interface DivProps {
-  size: number | BreakpointsObject;
-  collapse: string;
+  itemSize: number | BreakpointsObject;
+  itemCollapse?: string;
+  itemOrder?: number;
+  itemShrink?: number;
+  itemBasis?: string;
+  itemAlignSelf?: string;
 }
 
 const getFlexSize = (size: number | BreakpointsObject) => {
@@ -24,16 +32,14 @@ const getFlexSize = (size: number | BreakpointsObject) => {
   }
 
   if (isNumber(size)) {
-    return `flex-grow: ${size}`;
+    return `flex-grow: ${size};`;
   }
 
-  let style = '';
+  let style = 'flex-grow: 1;';
 
   Object.keys(size).map((key) => {
     if (mediaQueries[key]) {
-      style += mediaQueries[key](`
-        flex-grow: ${size[key]}
-      `);
+      style += mediaQueries[key](`flex-grow: ${size[key]};`);
     }
   });
 
@@ -41,20 +47,26 @@ const getFlexSize = (size: number | BreakpointsObject) => {
 };
 
 const Div = styled.div<DivProps>`
-  ${(props) => getFlexSize(props.size)}
-  ${(props) =>
-    props.collapse &&
-    mediaQueries[props.collapse] &&
-    mediaQueries[props.collapse](`
-    display: none;
-  `)}
+  ${(props) => getFlexSize(props.itemSize)}
+  ${(props) => props.itemCollapse && styledMediaQueriesForBreakpointList(props.itemCollapse, 'display: none;')}
+  ${(props) => props.itemOrder && `order: ${props.itemOrder};`}
+  ${(props) => props.itemShrink && `flex-shrink: ${props.itemShrink};`}
+  ${(props) => props.itemBasis && `flex-basis: ${props.itemBasis};`}
+  ${(props) => props.itemAlignSelf && `align-self: ${props.itemAlignSelf};`}
 `;
 
 export const UiTulkitFlexItem = (props: UiTulkitFlexItemProps) => {
   const { params, size } = props;
 
   return (
-    <Div size={size ? size : {}} collapse={params && params.collapse ? params.collapse : ''}>
+    <Div
+      itemSize={size ? size : {}}
+      itemCollapse={params?.collapse}
+      itemOrder={params?.order}
+      itemShrink={params?.shrink}
+      itemBasis={params?.basis}
+      itemAlignSelf={params?.alignSelf}
+    >
       {props.children}
     </Div>
   );
