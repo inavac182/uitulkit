@@ -5,7 +5,8 @@
     "baseUrl": "./packages",
     "paths": {
       "@uitulkit/card": ["card/src"],
-      "@uitulkit/layoutgrid": ["grid/src"],
+      "@uitulkit/flexgrid": ["flexgrid/src"],
+      "@uitulkit/colsgrid": ["colsgrid/src"],
       "@uitulkit/foundation": ["foundation/src"],
       "@uitulkit/*": ["*/src"]
     }

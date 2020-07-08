@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components';
 
 import { UiTulkitCard } from '@uitulkit/card';
 import { UiTulkitFlexGrid, UiTulkitFlexItem } from '@uitulkit/flexgrid';
+import { UiTulkitColsGrid, UiTulkitGridItem } from '@uitulkit/colsgrid';
 
 export const App = () => {
   const [theme, setTheme] = React.useState('dark');
@@ -28,11 +29,18 @@ export const App = () => {
           <img src={logo} className="App-logo" alt="logo" />
           <UiTulkitCard text="Hey!" />
         </header>
+        <h2>Flex grid</h2>
         <UiTulkitFlexGrid height="200px">
           <UiTulkitFlexItem size={2}>Hey 1!</UiTulkitFlexItem>
           <UiTulkitFlexItem size={{ s: 2, m: 3, l: 4 }}>Hey 2!</UiTulkitFlexItem>
           <UiTulkitFlexItem params={{ collapse: 's' }}>Hey 3!</UiTulkitFlexItem>
         </UiTulkitFlexGrid>
+        <h2>Col Grid</h2>
+        <UiTulkitColsGrid>
+          <UiTulkitGridItem>Hey 1!</UiTulkitGridItem>
+          <UiTulkitGridItem>Hey 2!</UiTulkitGridItem>
+          <UiTulkitGridItem>Hey 3!</UiTulkitGridItem>
+        </UiTulkitColsGrid>
       </div>
     </ThemeProvider>
   );
