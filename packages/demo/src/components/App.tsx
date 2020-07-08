@@ -4,7 +4,7 @@ import '../styles/App.css';
 import { ThemeProvider } from 'styled-components';
 
 import { UiTulkitCard } from '@uitulkit/card';
-import { UiTulkitFlexGrid, UiTulkitFlexItem } from '@uitulkit/layoutgrid';
+import { UiTulkitFlexGrid, UiTulkitFlexItem } from '@uitulkit/flexgrid';
 
 export const App = () => {
   const [theme, setTheme] = React.useState('dark');

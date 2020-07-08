@@ -1,6 +1,6 @@
 {
-  "name": "@uitulkit/layoutgrid",
-  "description": "Card component from @uitulkit library",
+  "name": "@uitulkit/flexgrid",
+  "description": "Layout flex grid component from @uitulkit library",
   "respository": "https://github.com/inavac182/uitulkit",
   "license": "MIT",
   "version": "0.1.0",
