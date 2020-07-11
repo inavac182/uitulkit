@@ -36,10 +36,15 @@ export const App = () => {
           <UiTulkitFlexItem params={{ collapse: 's' }}>Hey 3!</UiTulkitFlexItem>
         </UiTulkitFlexGrid>
         <h2>Col Grid</h2>
-        <UiTulkitColsGrid>
-          <UiTulkitGridItem>Hey 1!</UiTulkitGridItem>
+        <UiTulkitColsGrid cols={5} params={{ colsGap: 10 }}>
+          <UiTulkitGridItem colSpan={{ s: 1, m: 2, l: 3 }} rowSpan={2}>
+            Hey 1!
+          </UiTulkitGridItem>
           <UiTulkitGridItem>Hey 2!</UiTulkitGridItem>
-          <UiTulkitGridItem>Hey 3!</UiTulkitGridItem>
+          <UiTulkitGridItem params={{ collapse: 's' }}>Hey 3!</UiTulkitGridItem>
+          <UiTulkitGridItem>Hey 4!</UiTulkitGridItem>
+          <UiTulkitGridItem>Hey 5!</UiTulkitGridItem>
+          <UiTulkitGridItem>Hey 6!</UiTulkitGridItem>
         </UiTulkitColsGrid>
       </div>
     </ThemeProvider>

@@ -4,31 +4,50 @@ import styled from 'styled-components';
 interface UiTulkitColsGridProps {
   children?: React.ReactNode;
   params?: UiTulkitColsGripParams;
+  cols?: number;
+  rows?: number;
   height?: string;
   width?: string;
 }
 
-interface UiTulkitColsGripParams {}
+interface UiTulkitColsGripParams {
+  gridDisplay?: 'grid' | 'inline-grid';
+  colsGap?: number;
+  autoFlow?: string;
+  rowsGap?: number;
+}
 
 interface DivProps {
-  flexDirection?: string;
-  flexWrap?: string;
-  justifyContent?: string;
-  alignItems?: string;
-  alignContent?: string;
+  gridDisplay?: string;
+  gridCols?: number;
+  gridRows?: number;
+  colsGap?: number;
+  rowsGap?: number;
+  autoFlow?: string;
   gridWidth?: string;
   gridHeight?: string;
 }
 
 const Div = styled.div<DivProps>`
+  display: ${(props) => (props.gridDisplay ? props.gridDisplay : 'grid')};
+  grid-template-columns: repeat(${(props) => (props.gridCols ? props.gridCols : 1)}, 1fr);
+  grid-template-rows: ${(props) => (props.gridRows ? `repeat(${props.gridRows}, 1fr)` : 'auto')};
+  ${(props) => props.colsGap && `column-gap: ${props.colsGap}px;`}
+  ${(props) => props.rowsGap && `row-gap: ${props.rowsGap}px;`}
+  ${(props) => props.autoFlow && `grid-auto-flow: ${props.autoFlow}px;`}
   ${(props) => props.gridWidth && `width: ${props.gridWidth};`}
   ${(props) => props.gridHeight && `height: ${props.gridHeight};`}
-  display: flex;
 `;
 
 export const UiTulkitColsGrid = (props: UiTulkitColsGridProps) => {
   return (
-    <Div gridWidth={props?.width} gridHeight={props?.height}>
+    <Div
+      gridWidth={props?.width}
+      gridCols={props?.cols}
+      gridRows={props?.rows}
+      gridHeight={props?.height}
+      {...props.params}
+    >
       {props.children}
     </Div>
   );

@@ -6,40 +6,34 @@ import { isNumber } from 'util';
 interface UiTulkitGridItemProps {
   children?: React.ReactNode;
   params?: UiTulkitGridItemParams;
-  size?: number | BreakpointsObject;
+  colSpan?: number | BreakpointsObject;
+  rowSpan?: number | BreakpointsObject;
 }
 
 interface UiTulkitGridItemParams {
   collapse?: string;
-  order?: number;
-  shrink?: number;
-  basis?: string;
-  alignSelf?: string;
 }
 
 interface DivProps {
-  itemSize: number | BreakpointsObject;
-  itemCollapse?: string;
-  itemOrder?: number;
-  itemShrink?: number;
-  itemBasis?: string;
-  itemAlignSelf?: string;
+  itemColSpan: number | BreakpointsObject;
+  itemRowSpan: number | BreakpointsObject;
+  collapse?: string;
 }
 
-const getFlexSize = (size: number | BreakpointsObject) => {
+const getSpanSize = (size: number | BreakpointsObject, styleKey: string) => {
   if (!size) {
-    return '';
+    return `${styleKey}: span 1;`;
   }
 
   if (isNumber(size)) {
-    return `flex-grow: ${size};`;
+    return `${styleKey}: span ${size};`;
   }
 
-  let style = 'flex-grow: 1;';
+  let style = '';
 
   Object.keys(size).map((key) => {
     if (mediaQueries[key]) {
-      style += mediaQueries[key](`flex-grow: ${size[key]};`);
+      style += mediaQueries[key](`display: block; ${styleKey}: span ${size[key]};`);
     }
   });
 
@@ -47,15 +41,18 @@ const getFlexSize = (size: number | BreakpointsObject) => {
 };
 
 const Div = styled.div<DivProps>`
-  ${(props) => getFlexSize(props.itemSize)}
-  ${(props) => props.itemCollapse && styledMediaQueriesForBreakpointList(props.itemCollapse, 'display: none;')}
+  ${(props) => getSpanSize(props.itemColSpan, 'grid-column-start')};
+  ${(props) => getSpanSize(props.itemRowSpan, 'grid-row-start')};
+  ${(props) => props.collapse && styledMediaQueriesForBreakpointList(props.collapse, 'display: none;')}
 `;
 
 export const UiTulkitGridItem = (props: UiTulkitGridItemProps) => {
-  const { params, size } = props;
-
   return (
-    <Div itemSize={size ? size : {}} itemCollapse={params?.collapse}>
+    <Div
+      itemColSpan={props.colSpan ? props.colSpan : 1}
+      itemRowSpan={props.rowSpan ? props.rowSpan : 1}
+      {...props.params}
+    >
       {props.children}
     </Div>
   );
