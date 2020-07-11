@@ -29,7 +29,7 @@ const getSpanSize = (size: number | BreakpointsObject, styleKey: string) => {
     return `${styleKey}: span ${size};`;
   }
 
-  let style = '';
+  let style = 'display: none;';
 
   Object.keys(size).map((key) => {
     if (mediaQueries[key]) {

@@ -41,7 +41,7 @@ export const App = () => {
             Hey 1!
           </UiTulkitGridItem>
           <UiTulkitGridItem>Hey 2!</UiTulkitGridItem>
-          <UiTulkitGridItem params={{ collapse: 's' }}>Hey 3!</UiTulkitGridItem>
+          <UiTulkitGridItem params={{ collapse: 's|l' }}>Hey 3!</UiTulkitGridItem>
           <UiTulkitGridItem>Hey 4!</UiTulkitGridItem>
           <UiTulkitGridItem>Hey 5!</UiTulkitGridItem>
           <UiTulkitGridItem>Hey 6!</UiTulkitGridItem>
