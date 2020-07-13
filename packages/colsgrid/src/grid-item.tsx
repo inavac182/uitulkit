@@ -12,17 +12,20 @@ interface UiTulkitGridItemProps {
 
 interface UiTulkitGridItemParams {
   collapse?: string;
+  alignSelf?: 'start' | 'end' | 'center' | 'stretch';
 }
 
 interface DivProps {
   itemColSpan: number | BreakpointsObject;
   itemRowSpan: number | BreakpointsObject;
+  alignSelf?: string;
   collapse?: string;
 }
 
 const Div = styled.div<DivProps>`
   ${(props) => getSpanSize(props.itemColSpan, 'grid-column-start')};
   ${(props) => getSpanSize(props.itemRowSpan, 'grid-row-start')};
+  ${(props) => props.alignSelf && `align-self: ${props.alignSelf};`}
   ${(props) => props.collapse && styledMediaQueriesForBreakpointList(props.collapse, 'display: none;')}
 `;
 

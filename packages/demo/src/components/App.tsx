@@ -37,7 +37,7 @@ export const App = () => {
         </UiTulkitFlexGrid>
         <h2>Col Grid</h2>
         <UiTulkitColsGrid cols={5} params={{ colsGap: 10 }}>
-          <UiTulkitGridItem colSpan={{ s: 1, m: 2, l: 3 }} rowSpan={2}>
+          <UiTulkitGridItem colSpan={{ s: 1, m: 2, l: 3 }} rowSpan={2} params={{ alignSelf: 'center' }}>
             Hey 1!
           </UiTulkitGridItem>
           <UiTulkitGridItem>Hey 2!</UiTulkitGridItem>
