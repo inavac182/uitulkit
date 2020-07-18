@@ -38,15 +38,15 @@ export const App = () => {
         <h2>Col Grid</h2>
         <UiTulkitColsGrid
           cols={{ s: 5, m: 8, l: 10 }}
-          rows={{ s: 2, m: 1, l: 3 }}
+          rows={{ s: 2, m: 2, l: 3 }}
           params={{ colsGap: 10, rowsGap: 10, rowSize: '30px' }}
         >
-          <UiTulkitGridItem colSpan={{ s: 1, m: 2, l: 3 }} rowSpan={2} params={{ alignSelf: 'stretch' }}>
+          <UiTulkitGridItem colSpan={{ s: 1, m: 2, l: 3 }} rowSpan={2}>
             Hey 1!
           </UiTulkitGridItem>
           <UiTulkitGridItem>Hey 2!</UiTulkitGridItem>
           <UiTulkitGridItem params={{ collapse: 's|l' }}>Hey 3!</UiTulkitGridItem>
-          <UiTulkitGridItem>Hey 4!</UiTulkitGridItem>
+          <UiTulkitGridItem rowSpan={{ s: 1, m: 2, l: 3 }}>Hey 4!</UiTulkitGridItem>
           <UiTulkitGridItem>Hey 5!</UiTulkitGridItem>
           <UiTulkitGridItem>Hey 6!</UiTulkitGridItem>
         </UiTulkitColsGrid>
