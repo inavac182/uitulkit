@@ -30,22 +30,24 @@ export const App = () => {
           <UiTulkitCard text="Hey!" />
         </header>
         <h2>Flex grid</h2>
-        <UiTulkitFlexGrid height="200px">
+        <UiTulkitFlexGrid gridHeight="200px">
           <UiTulkitFlexItem size={2}>Hey 1!</UiTulkitFlexItem>
           <UiTulkitFlexItem size={{ s: 2, m: 3, l: 4 }}>Hey 2!</UiTulkitFlexItem>
-          <UiTulkitFlexItem params={{ collapse: 's' }}>Hey 3!</UiTulkitFlexItem>
+          <UiTulkitFlexItem collapse="s">Hey 3!</UiTulkitFlexItem>
         </UiTulkitFlexGrid>
         <h2>Col Grid</h2>
         <UiTulkitColsGrid
-          cols={{ s: 5, m: 8, l: 10 }}
-          rows={{ s: 2, m: 2, l: 3 }}
-          params={{ colsGap: 10, rowsGap: 10, rowSize: '30px' }}
+          gridCols={{ s: 5, m: 8, l: 10 }}
+          gridRows={{ s: 2, m: 2, l: 3 }}
+          colsGap={10}
+          rowsGap={10}
+          rowSize="30px"
         >
           <UiTulkitGridItem colSpan={{ s: 1, m: 2, l: 3 }} rowSpan={2}>
             Hey 1!
           </UiTulkitGridItem>
           <UiTulkitGridItem>Hey 2!</UiTulkitGridItem>
-          <UiTulkitGridItem params={{ collapse: 's|l' }}>Hey 3!</UiTulkitGridItem>
+          <UiTulkitGridItem collapse="s|l">Hey 3!</UiTulkitGridItem>
           <UiTulkitGridItem rowSpan={{ s: 1, m: 2, l: 3 }}>Hey 4!</UiTulkitGridItem>
           <UiTulkitGridItem>Hey 5!</UiTulkitGridItem>
           <UiTulkitGridItem>Hey 6!</UiTulkitGridItem>

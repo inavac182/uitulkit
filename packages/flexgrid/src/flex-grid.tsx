@@ -3,14 +3,10 @@ import styled from 'styled-components';
 
 interface UiTulkitFlexGridProps {
   children?: React.ReactNode;
-  params?: UiTulkitFlexGripParams;
-  height?: string;
-  width?: string;
-}
-
-interface UiTulkitFlexGripParams {
+  gridHeight?: string;
+  gridWidth?: string;
   direction?: string;
-  wrap?: string;
+  flexWrap?: string;
   justifyContent?: string;
   alignItems?: string;
   alignContent?: string;
@@ -27,9 +23,9 @@ interface DivProps {
 }
 
 const Div = styled.div<DivProps>`
+  display: flex;
   ${(props) => props.gridWidth && `width: ${props.gridWidth};`}
   ${(props) => props.gridHeight && `height: ${props.gridHeight};`}
-  display: flex;
   ${(props) => props.flexDirection && `flex-direction: ${props.flexDirection};`}
   ${(props) => props.flexWrap && `flex-wrap: ${props.flexWrap};`}
   ${(props) => props.justifyContent && `justify-content: ${props.justifyContent};`}
@@ -38,19 +34,5 @@ const Div = styled.div<DivProps>`
 `;
 
 export const UiTulkitFlexGrid = (props: UiTulkitFlexGridProps) => {
-  const { params } = props;
-
-  return (
-    <Div
-      gridWidth={props?.width}
-      gridHeight={props?.height}
-      flexDirection={params?.direction}
-      flexWrap={params?.wrap}
-      justifyContent={params?.justifyContent}
-      alignItems={params?.alignItems}
-      alignContent={params?.alignContent}
-    >
-      {props.children}
-    </Div>
-  );
+  return <Div {...props}>{props.children}</Div>;
 };

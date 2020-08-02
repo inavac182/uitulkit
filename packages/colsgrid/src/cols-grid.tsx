@@ -6,14 +6,10 @@ import { getSpansBreakpoint } from '.';
 
 interface UiTulkitColsGridProps {
   children?: React.ReactNode;
-  params?: UiTulkitColsGripParams;
-  cols: number | BreakpointsObject;
-  rows?: number | BreakpointsObject;
+  gridCols: number | BreakpointsObject;
+  gridRows?: number | BreakpointsObject;
   height?: string;
   width?: string;
-}
-
-interface UiTulkitColsGripParams {
   gridDisplay?: 'grid' | 'inline-grid';
   colsGap?: number;
   autoFlow?: string;
@@ -24,8 +20,8 @@ interface UiTulkitColsGripParams {
 
 interface DivProps {
   gridDisplay?: string;
-  gridCols: number | BreakpointsObject;
-  gridRows: number | BreakpointsObject;
+  gridCols?: number | BreakpointsObject;
+  gridRows?: number | BreakpointsObject;
   colsGap?: number;
   rowsGap?: number;
   autoFlow?: string;
@@ -39,13 +35,13 @@ const Div = styled.div<DivProps>`
   display: ${(props) => (props.gridDisplay ? props.gridDisplay : 'grid')};
   ${(props) =>
     getSpansBreakpoint(
-      props.gridCols,
+      props.gridCols ? props.gridCols : 1,
       props.colSize,
       'grid-template-columns',
       'display: none;',
       `display: ${props.gridDisplay ? props.gridDisplay : 'grid'};`
     )};
-  ${(props) => getSpansBreakpoint(props.gridRows, props.rowSize, 'grid-template-rows')};
+  ${(props) => getSpansBreakpoint(props.gridRows ? props.gridRows : 1, props.rowSize, 'grid-template-rows')};
   ${(props) => props.colsGap && `column-gap: ${props.colsGap}px;`}
   ${(props) => props.rowsGap && `row-gap: ${props.rowsGap}px;`}
   ${(props) => props.autoFlow && `grid-auto-flow: ${props.autoFlow}px;`}
@@ -54,15 +50,5 @@ const Div = styled.div<DivProps>`
 `;
 
 export const UiTulkitColsGrid = (props: UiTulkitColsGridProps) => {
-  return (
-    <Div
-      gridWidth={props?.width}
-      gridCols={props?.cols}
-      gridRows={props.rows ? props.rows : 1}
-      gridHeight={props?.height}
-      {...props.params}
-    >
-      {props.children}
-    </Div>
-  );
+  return <Div {...props}>{props.children}</Div>;
 };

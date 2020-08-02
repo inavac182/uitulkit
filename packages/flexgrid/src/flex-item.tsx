@@ -5,11 +5,7 @@ import { isNumber } from 'util';
 
 interface UiTulkitFlexItemProps {
   children?: React.ReactNode;
-  params?: UiTulkitFlexItemParams;
   size?: number | BreakpointsObject;
-}
-
-interface UiTulkitFlexItemParams {
   collapse?: string;
   order?: number;
   shrink?: number;
@@ -18,12 +14,12 @@ interface UiTulkitFlexItemParams {
 }
 
 interface DivProps {
-  itemSize: number | BreakpointsObject;
-  itemCollapse?: string;
-  itemOrder?: number;
-  itemShrink?: number;
-  itemBasis?: string;
-  itemAlignSelf?: string;
+  size?: number | BreakpointsObject;
+  collapse?: string;
+  order?: number;
+  shrink?: number;
+  basis?: string;
+  alignSelf?: string;
 }
 
 const getFlexSize = (size: number | BreakpointsObject) => {
@@ -47,27 +43,12 @@ const getFlexSize = (size: number | BreakpointsObject) => {
 };
 
 const Div = styled.div<DivProps>`
-  ${(props) => getFlexSize(props.itemSize)}
-  ${(props) => props.itemCollapse && styledMediaQueriesForBreakpointList(props.itemCollapse, 'display: none;')}
-  ${(props) => props.itemOrder && `order: ${props.itemOrder};`}
-  ${(props) => props.itemShrink && `flex-shrink: ${props.itemShrink};`}
-  ${(props) => props.itemBasis && `flex-basis: ${props.itemBasis};`}
-  ${(props) => props.itemAlignSelf && `align-self: ${props.itemAlignSelf};`}
+  ${(props) => getFlexSize(props.size ? props.size : {})}
+  ${(props) => props.collapse && styledMediaQueriesForBreakpointList(props.collapse, 'display: none;')}
+  ${(props) => props.order && `order: ${props.order};`}
+  ${(props) => props.shrink && `flex-shrink: ${props.shrink};`}
+  ${(props) => props.basis && `flex-basis: ${props.basis};`}
+  ${(props) => props.alignSelf && `align-self: ${props.alignSelf};`}
 `;
 
-export const UiTulkitFlexItem = (props: UiTulkitFlexItemProps) => {
-  const { params, size } = props;
-
-  return (
-    <Div
-      itemSize={size ? size : {}}
-      itemCollapse={params?.collapse}
-      itemOrder={params?.order}
-      itemShrink={params?.shrink}
-      itemBasis={params?.basis}
-      itemAlignSelf={params?.alignSelf}
-    >
-      {props.children}
-    </Div>
-  );
-};
+export const UiTulkitFlexItem = (props: UiTulkitFlexItemProps) => <Div {...props}>{props.children}</Div>;
