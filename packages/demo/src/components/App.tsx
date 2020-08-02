@@ -4,6 +4,7 @@ import '../styles/App.css';
 import { ThemeProvider } from 'styled-components';
 
 import { UiTulkitCard } from '@uitulkit/card';
+import { UiTulkitButton } from '@uitulkit/button';
 import { UiTulkitFlexGrid, UiTulkitFlexItem } from '@uitulkit/flexgrid';
 import { UiTulkitColsGrid, UiTulkitGridItem } from '@uitulkit/colsgrid';
 
@@ -20,12 +21,12 @@ export const App = () => {
     <ThemeProvider theme={{ main: theme }}>
       <div className="App">
         <header className="App-header">
-          <button value="light" onClick={changeTheme}>
+          <UiTulkitButton value="light" onClick={changeTheme} width="200px" className="something">
             Light Theme
-          </button>
-          <button value="dark" onClick={changeTheme}>
+          </UiTulkitButton>
+          <UiTulkitButton value="dark" onClick={changeTheme} width="200px">
             Dark Theme
-          </button>
+          </UiTulkitButton>
           <img src={logo} className="App-logo" alt="logo" />
           <UiTulkitCard text="Hey!" />
         </header>

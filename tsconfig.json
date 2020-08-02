@@ -4,9 +4,10 @@
   "compilerOptions": {
     "baseUrl": "./packages",
     "paths": {
+      "@uitulkit/button": ["button/src"],
       "@uitulkit/card": ["card/src"],
-      "@uitulkit/flexgrid": ["flexgrid/src"],
       "@uitulkit/colsgrid": ["colsgrid/src"],
+      "@uitulkit/flexgrid": ["flexgrid/src"],
       "@uitulkit/foundation": ["foundation/src"],
       "@uitulkit/*": ["*/src"]
     }
