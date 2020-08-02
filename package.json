@@ -24,6 +24,7 @@
 	"dependencies": {
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
+		"react-router-dom": "^5.2.0",
 		"react-scripts": "3.4.0"
 	},
 	"devDependencies": {
@@ -35,6 +36,7 @@
 		"@types/node": "11.13.0",
 		"@types/react": "16.8.10",
 		"@types/react-dom": "16.8.3",
+		"@types/react-router-dom": "^5.1.5",
 		"@types/testing-library__jest-dom": "^5.9.1",
 		"babel-eslint": "10.0.3",
 		"commitlint": "^8.3.5",
