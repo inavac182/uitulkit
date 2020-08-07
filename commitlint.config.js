@@ -16,7 +16,8 @@ module.exports = {
         'themes',
         'grid',
         'foundation',
-        'demo'
+        'demo',
+        'view'
       ]
     ]
   }
