@@ -1,3 +1,3 @@
-export const Fonts = {
-  type: 'bold',
+export const FONTS = {
+  TYPE: 'bold',
 };

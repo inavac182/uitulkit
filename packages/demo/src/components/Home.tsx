@@ -4,7 +4,7 @@ import '../styles/App.css';
 
 import { UiTulkitButton } from '@uitulkit/button';
 import { UiTulkitColsGrid, UiTulkitGridItem } from '@uitulkit/colsgrid';
-import { Viewport, Breakpoints } from '@uitulkit/foundation';
+import { Viewport, Breakpoints, Themes } from '@uitulkit/foundation';
 
 interface HomeProps {
   changeTheme: (e?: MouseEvent<HTMLButtonElement>) => void;
@@ -13,7 +13,7 @@ interface HomeProps {
 export const Home = ({ changeTheme }: HomeProps) => {
   return (
     <div className="App">
-      <UiTulkitButton value="dark" onClick={changeTheme}>
+      <UiTulkitButton value={Themes.LIGHT} onClick={changeTheme}>
         Change to light
       </UiTulkitButton>
       <UiTulkitColsGrid gridCols={{ s: 1, m: 1, l: 10 }} className="grid-big">

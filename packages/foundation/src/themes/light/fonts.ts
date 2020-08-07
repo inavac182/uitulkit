@@ -1,3 +1,3 @@
-export const Fonts = {
-  type: 'light',
+export const FONTS = {
+  TYPE: 'light',
 };

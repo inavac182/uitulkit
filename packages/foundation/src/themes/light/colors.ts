@@ -1,6 +1,6 @@
-export const Colors = {
-  main: '#ffffff',
-  contrast: '#00ff00',
-  soft: '#4d4d4d',
-  softBg: '#e6e6e6',
+export const COLORS = {
+  MAIN: '#ffffff',
+  CONTRAST: '#00ff00',
+  SOFT: '#4d4d4d',
+  SOFTBG: '#e6e6e6',
 };
