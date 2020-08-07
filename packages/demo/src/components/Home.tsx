@@ -18,7 +18,7 @@ export const Home = ({ changeTheme }: HomeProps) => {
         <UiTulkitGridItem colSpan={3}>
           <p>NavBar</p>
         </UiTulkitGridItem>
-        <UiTulkitGridItem colSpan={2}>
+        <UiTulkitGridItem colSpan={7}>
           <p>Home text</p>
           <UiTulkitButton value={Themes.LIGHT} onClick={changeTheme}>
             Light
