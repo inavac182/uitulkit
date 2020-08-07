@@ -5,7 +5,7 @@ import { createBrowserHistory } from 'history';
 import { ThemeProvider } from 'styled-components';
 
 import './styles/index.css';
-import { App } from './components';
+import { Home } from './components';
 import * as serviceWorker from './serviceWorker';
 
 const history = createBrowserHistory();
@@ -24,7 +24,7 @@ const AppWrapper = () => {
       <Router history={history}>
         <Switch>
           <Route path="/">
-            <App changeTheme={changeTheme} />
+            <Home changeTheme={changeTheme} />
           </Route>
         </Switch>
       </Router>

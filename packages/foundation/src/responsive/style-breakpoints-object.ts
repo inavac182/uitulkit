@@ -7,7 +7,7 @@ export const styleBreakpointsObject = (
   extraStaticStyle = '',
   staticStylePreValue = '',
   staticStylePostValue = ''
-) => {
+): string => {
   let style = `${defaultStyle}`;
 
   Object.keys(sizesObj).map((key) => {

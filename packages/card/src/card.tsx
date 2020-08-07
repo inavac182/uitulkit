@@ -1,27 +1,21 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import { themes } from '@uitulkit/foundation';
+import { ThemeProp, getColor } from '@uitulkit/foundation';
 
 interface UiTulkitCardProps {
-  text: string;
-  theme?: string;
+  text?: string;
+  theme?: ThemeProp;
 }
 
 const Div = styled.div`
   width: 100%;
   border-radius: 3px;
 
-  background: ${(props) => themes[props.theme.main].Colors.softBg};
-  color: ${(props) => themes[props.theme.main].Colors.soft};
-  border: 2px solid ${(props) => themes[props.theme.main].Colors.contrast};
+  background: ${(props: UiTulkitCardProps) => getColor('softBg', props?.theme?.main)};
+  color: ${(props: UiTulkitCardProps) => getColor('soft', props?.theme?.main)};
+  border: 2px solid ${(props: UiTulkitCardProps) => getColor('contrast', props?.theme?.main)};
 `;
-
-Div.defaultProps = {
-  theme: {
-    main: 'dark',
-  },
-};
 
 export const UiTulkitCard = (props: UiTulkitCardProps) => {
   const { text } = props;

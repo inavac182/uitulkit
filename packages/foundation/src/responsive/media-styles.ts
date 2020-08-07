@@ -1,23 +1,18 @@
-import { breakpoints } from '.';
+import { breakpointsSizes } from '.';
 
 export const mediaQueries = {
-  s: (styles: string) => `
-    @media (max-width: ${breakpoints.s.max}px) {
+  s: (styles: string): string => `
+    @media (max-width: ${breakpointsSizes.s.max}px) {
       ${styles}
     }
   `,
-  m: (styles: string) => `
-    @media (min-width: ${breakpoints.m.min}px) and (max-width: ${breakpoints.m.max}px) {
+  m: (styles: string): string => `
+    @media (min-width: ${breakpointsSizes.m.min}px) and (max-width: ${breakpointsSizes.m.max}px) {
       ${styles}
     }
   `,
-  l: (styles: string) => `
-  @media (min-width: ${breakpoints.l.min}px) and (max-width: ${breakpoints.l.max}px) {
-    ${styles}
-  }
-`,
-  xl: (styles: string) => `
-  @media (min-width: ${breakpoints.xl.min}px) {
+  l: (styles: string): string => `
+  @media (min-width: ${breakpointsSizes.l.min}px) {
     ${styles}
   }
 `,

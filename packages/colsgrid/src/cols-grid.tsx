@@ -6,6 +6,7 @@ import { getSpansBreakpoint } from '.';
 
 interface UiTulkitColsGridProps {
   children?: React.ReactNode;
+  className?: string;
   gridCols: number | BreakpointsObject;
   gridRows?: number | BreakpointsObject;
   height?: string;

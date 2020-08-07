@@ -1,4 +1,4 @@
-export const breakpoints = {
+export const breakpointsSizes = {
   s: {
     max: 579,
   },
@@ -8,9 +8,5 @@ export const breakpoints = {
   },
   l: {
     min: 992,
-    max: 1311,
-  },
-  xl: {
-    min: 1312,
   },
 };
