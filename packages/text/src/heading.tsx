@@ -10,11 +10,13 @@ interface UiTulkitHeadingProps {
   level: 1 | 2 | 3 | 4 | 5 | 6;
   separator?: 'top' | 'bottom' | 'left' | 'right';
   align?: 'left' | 'center' | 'right';
+  inline?: boolean;
 }
 
 const headingStyles = (props: UiTulkitHeadingProps) => `
-  ${props?.separator && OneSideBorder(props.separator, 1, 'solid')};
-  ${props?.align && AlignText(props.align)};
+  ${props?.separator ? OneSideBorder(props.separator, 1, 'solid') : ''};
+  ${props?.align ? AlignText(props.align) : ''};
+  ${props?.inline ? `display: inline` : ''};
 `;
 
 const HeadingH1 = styled.h1<UiTulkitHeadingProps>`
