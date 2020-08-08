@@ -4,9 +4,14 @@ import { Switch, Route, Router } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import { ThemeProvider } from 'styled-components';
 
-import './styles/index.css';
-import { Home } from './components';
 import * as serviceWorker from './serviceWorker';
+import { UiTulkitView } from '@uitulkit/view';
+import { UiTulkitColsGrid, UiTulkitGridItem } from '@uitulkit/colsgrid';
+
+import { Header, Navbar, Footer, Welcome, Buttons, Cards, Grids } from './components';
+import './styles/index.css';
+import './styles/App.css';
+import { Viewport, Breakpoints } from '@uitulkit/foundation';
 
 const history = createBrowserHistory();
 
@@ -20,15 +25,31 @@ const AppWrapper = () => {
   }, []);
 
   return (
-    <ThemeProvider theme={{ main: theme }}>
-      <Router history={history}>
-        <Switch>
-          <Route path="/">
-            <Home changeTheme={changeTheme} />
-          </Route>
-        </Switch>
-      </Router>
-    </ThemeProvider>
+    <Router history={history}>
+      <ThemeProvider theme={{ main: theme }}>
+        <UiTulkitView className="App" centered>
+          <Header />
+          <UiTulkitColsGrid gridCols={{ s: 1, m: 1, l: 10 }} className="grid-big">
+            <Viewport breakpoint={Breakpoints.LARGE}>
+              <UiTulkitGridItem colSpan={3}>
+                <Navbar />
+              </UiTulkitGridItem>
+            </Viewport>
+            <UiTulkitGridItem colSpan={7}>
+              <Switch>
+                <Route path="/buttons/" component={Buttons} />
+                <Route path="/cards/" component={Cards} />
+                <Route path="/grids/" component={Grids} />
+                <Route path="/">
+                  <Welcome changeTheme={changeTheme} />
+                </Route>
+              </Switch>
+            </UiTulkitGridItem>
+          </UiTulkitColsGrid>
+          <Footer />
+        </UiTulkitView>
+      </ThemeProvider>
+    </Router>
   );
 };
 
