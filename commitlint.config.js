@@ -17,7 +17,9 @@ module.exports = {
         'grid',
         'foundation',
         'demo',
-        'view'
+        'view',
+        'text',
+        'list'
       ]
     ]
   }

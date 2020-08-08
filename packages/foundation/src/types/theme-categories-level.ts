@@ -3,4 +3,5 @@ export enum ThemesCategoriesLevel {
   CONTRAST = 'CONTRAST',
   SOFT = 'SOFT',
   SOFTBG = 'SOFTBG',
+  TEXT = 'TEXT',
 }

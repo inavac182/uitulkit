@@ -1,21 +1,25 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
+
+import { UiTulkitList, UiTulkitListItem } from '@uitulkit/list';
+import { UiTulkitLink } from '@uitulkit/text';
 
 export const Navbar = () => {
   return (
-    <ul>
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-      <li>
-        <Link to="/buttons/">Buttons</Link>
-      </li>
-      <li>
-        <Link to="/cards/">Cards</Link>
-      </li>
-      <li>
-        <Link to="/grids/">Grids</Link>
-      </li>
-    </ul>
+    <UiTulkitList>
+      <UiTulkitListItem>
+        <UiTulkitLink to="/" external>
+          Home
+        </UiTulkitLink>
+      </UiTulkitListItem>
+      <UiTulkitListItem>
+        <UiTulkitLink to="/buttons/">Buttons</UiTulkitLink>
+      </UiTulkitListItem>
+      <UiTulkitListItem>
+        <UiTulkitLink to="/cards/">Cards</UiTulkitLink>
+      </UiTulkitListItem>
+      <UiTulkitListItem>
+        <UiTulkitLink to="/grids/">Grids</UiTulkitLink>
+      </UiTulkitListItem>
+    </UiTulkitList>
   );
 };

@@ -9,6 +9,8 @@
       "@uitulkit/colsgrid": ["colsgrid/src"],
       "@uitulkit/flexgrid": ["flexgrid/src"],
       "@uitulkit/foundation": ["foundation/src"],
+      "@uitulkit/list": ["list/src"],
+      "@uitulkit/text": ["text/src"],
       "@uitulkit/view": ["view/src"],
       "@uitulkit/*": ["*/src"]
     }

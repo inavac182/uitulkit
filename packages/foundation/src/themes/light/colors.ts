@@ -3,4 +3,5 @@ export const COLORS = {
   CONTRAST: '#00ff00',
   SOFT: '#4d4d4d',
   SOFTBG: '#e6e6e6',
+  TEXT: '#00000',
 };

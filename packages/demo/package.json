@@ -9,6 +9,8 @@
     "@uitulkit/colsgrid": "^0.1.0",
     "@uitulkit/flexgrid": "^0.1.0",
     "@uitulkit/foundation": "^0.1.0",
+    "@uitulkit/list": "^0.1.0",
+    "@uitulkit/text": "^0.1.0",
     "@uitulkit/view": "^0.1.0",
     "styled-components": "^5.1.1"
   },
