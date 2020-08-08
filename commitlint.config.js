@@ -11,6 +11,7 @@ module.exports = {
       [
         'button',
         'card',
+        'docs',
         'misc',
         'release',
         'themes',

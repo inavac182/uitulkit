@@ -8,7 +8,13 @@ export const Buttons = () => {
       <UiTulkitHeading level={1} separator="bottom" align="left">
         Buttons
       </UiTulkitHeading>
-      <UiTulkitText> Buttons everywhere! 💁🏻‍♂️</UiTulkitText>
+      <UiTulkitText>
+        {' '}
+        Buttons everywhere!{' '}
+        <span role="img" aria-label="nice emoji">
+          💁🏻‍♂️
+        </span>
+      </UiTulkitText>
       <UiTulkitParagraph>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vestibulum commodo dolor, ac iaculis nisl iaculis
         in. Maecenas placerat pellentesque sollicitudin. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce

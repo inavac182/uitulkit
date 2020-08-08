@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { UiTulkitText, UiTulkitHeading } from '@uitulkit/text';
+import { UiTulkitHeading } from '@uitulkit/text';
 
 export const Header = () => {
   return (
