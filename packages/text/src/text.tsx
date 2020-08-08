@@ -8,6 +8,7 @@ interface UiTulkitTextProps {
 
 const Paragrah = styled.p`
   font-size: 1.2em;
+  text-align: left;
 `;
 
 export const UiTulkitText = (props: UiTulkitTextProps) => {

@@ -18,6 +18,7 @@ interface UiTulkitButtonProps {
 
 const Button = styled.button<UiTulkitButtonProps>`
   width: ${(props: UiTulkitButtonProps) => (props.width ? props.width : '100%')};
+  cursor: pointer;
   border-radius: 3px;
   background: ${(props: UiTulkitButtonProps) =>
     getValueFromTheme(ThemesCategories.COLORS, ThemesCategoriesLevel.MAIN, props?.theme?.main)};
