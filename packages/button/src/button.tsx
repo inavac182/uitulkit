@@ -2,13 +2,11 @@ import * as React from 'react';
 import { MouseEvent } from 'react';
 import styled from 'styled-components';
 
-import { ThemeProp, getValueFromTheme, ThemesCategoriesLevel, ThemesCategories } from '@uitulkit/foundation';
+import { UiTulkitElements, getValueFromTheme, ThemesCategoriesLevel, ThemesCategories } from '@uitulkit/foundation';
 
-interface UiTulkitButtonProps {
+interface UiTulkitButtonProps extends UiTulkitElements {
   children?: React.ReactNode;
-  className?: string;
-  theme?: ThemeProp;
-  width?: string;
+  fullWidth?: boolean;
   height?: string;
   value?: string | number;
   name?: string;
@@ -17,9 +15,11 @@ interface UiTulkitButtonProps {
 }
 
 const Button = styled.button<UiTulkitButtonProps>`
-  width: ${(props: UiTulkitButtonProps) => (props.width ? props.width : '100%')};
+  ${(props: UiTulkitButtonProps) => props.fullWidth && `width: 100%;`};
+  padding: 10px;
   cursor: pointer;
   border-radius: 3px;
+  display: block;
   background: ${(props: UiTulkitButtonProps) =>
     getValueFromTheme(ThemesCategories.COLORS, ThemesCategoriesLevel.MAIN, props?.theme?.main)};
   color: ${(props: UiTulkitButtonProps) =>
@@ -27,8 +27,16 @@ const Button = styled.button<UiTulkitButtonProps>`
   border: 2px solid
     ${(props: UiTulkitButtonProps) =>
       getValueFromTheme(ThemesCategories.COLORS, ThemesCategoriesLevel.SOFTBG, props?.theme?.main)};
+  &:hover {
+    background-color: ${(props: UiTulkitButtonProps) =>
+      getValueFromTheme(ThemesCategories.COLORS, ThemesCategoriesLevel.CONTRAST, props?.theme?.main)};
+  }
+  &:active {
+    background-color: ${(props: UiTulkitButtonProps) =>
+      getValueFromTheme(ThemesCategories.COLORS, ThemesCategoriesLevel.SOFTBG, props?.theme?.main)};
+  }
 `;
 
 export const UiTulkitButton = (props: UiTulkitButtonProps) => {
-  return <Button {...props}>{props.children}</Button>;
+  return <Button {...props}>{props?.children}</Button>;
 };
