@@ -37,7 +37,7 @@ export const Buttons = () => {
       <UiTulkitHeading level={2} separator="bottom" align="left">
         Buttons Group
       </UiTulkitHeading>
-      <UiTulkitButtonsGroup>
+      <UiTulkitButtonsGroup buttonsGap={10}>
         <UiTulkitButton> First Button </UiTulkitButton>
         <UiTulkitButton> Second Button </UiTulkitButton>
       </UiTulkitButtonsGroup>

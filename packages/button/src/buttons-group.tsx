@@ -31,7 +31,17 @@ export const UiTulkitButtonsGroup = (props: ButtonsGroupProps) => {
         )}
       </>
     );
+  } else {
+    return (
+      <>
+        {props.children && (
+          <UiTulkitColsGrid gridCols={1} gridRows={Object.keys(props.children).length} rowsGap={props?.buttonsGap}>
+            {Object.keys(props.children).map((key) => (
+              <React.Fragment key={key}>{props.children && props.children[key]}</React.Fragment>
+            ))}
+          </UiTulkitColsGrid>
+        )}
+      </>
+    );
   }
-
-  return <ButtonsGroup {...props}>{props.children}</ButtonsGroup>;
 };
