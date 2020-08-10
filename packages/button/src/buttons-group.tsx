@@ -10,14 +10,6 @@ interface ButtonsGroupProps extends UiTulkitElements {
   buttonsGap?: number;
 }
 
-const ButtonsGroup = styled.div<ButtonsGroupProps>`
-  width: 100%;
-
-  button {
-    width: 100%;
-  }
-`;
-
 export const UiTulkitButtonsGroup = (props: ButtonsGroupProps) => {
   if (props?.type === 'bar') {
     return (
