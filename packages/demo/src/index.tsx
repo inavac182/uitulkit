@@ -11,6 +11,7 @@ import { UiTulkitColsGrid, UiTulkitGridItem } from '@uitulkit/colsgrid';
 import { Header, Navbar, Footer, Welcome, Buttons, Cards, Grids } from './components';
 import './styles/index.css';
 import './styles/App.css';
+import '../node_modules/@uitulkit/foundation/dist/css/main.css';
 import { Viewport, Breakpoints } from '@uitulkit/foundation';
 
 const history = createBrowserHistory();

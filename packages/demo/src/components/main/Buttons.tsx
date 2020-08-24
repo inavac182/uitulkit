@@ -17,7 +17,7 @@ export const Buttons = () => {
           💁🏻‍♂️
         </span>
       </UiTulkitText>
-      <UiTulkitButton> Button </UiTulkitButton>
+      <UiTulkitButton className="margin-x"> Button </UiTulkitButton>
       <UiTulkitParagraph>
         <UiTulkitText>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vestibulum commodo dolor, ac iaculis nisl
@@ -37,7 +37,7 @@ export const Buttons = () => {
       <UiTulkitHeading level={2} separator="bottom" align="left">
         Buttons Group
       </UiTulkitHeading>
-      <UiTulkitButtonsGroup buttonsGap={10}>
+      <UiTulkitButtonsGroup buttonsGap={5}>
         <UiTulkitButton> First Button </UiTulkitButton>
         <UiTulkitButton> Second Button </UiTulkitButton>
       </UiTulkitButtonsGroup>

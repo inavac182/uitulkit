@@ -1,0 +1,52 @@
+$all: 'all';
+
+$breakpoints: 'small' 579px, 'medium' 991px, 'large' 992px, 'all';
+
+$sizes: 'one' 1px, 'two' 2px, 'three' 3px, 'four' 4px, 'five' 5px, 'ten' 10px, 'twenty' 20px, 'thirty' 30px,
+  'fourty' 40px, 'fifty' 50px;
+
+$sides: 'top', 'bottom', 'right', 'left', 'all';
+
+$tags: 'margin', 'padding';
+
+@each $breakpoint in $breakpoints {
+  // GENERATE CLASSES FOR ALL BREAKPOINTS
+  @if (nth($breakpoint, 1) == $all) {
+    @each $tag in $tags {
+      @each $side in $sides {
+        @each $size in $sizes {
+          .#{nth($breakpoint, 1)}-#{nth($tag, 1)}-#{nth($side, 1)}-#{nth($size, 1)} {
+            @if (nth($side, 1) == $all) {
+              #{$tag}: nth($size, 2);
+            }
+
+            @if (nth($side, 1) != $all) {
+              #{$tag}-#{$side}: nth($size, 2);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // GENERATE CLASSES FOR STYLES BY BREAKPOINT
+  @if (nth($breakpoint, 1) != $all) {
+    @media only screen and (min-width: nth($breakpoint, 1)) {
+      @each $tag in $tags {
+        @each $side in $sides {
+          @each $size in $sizes {
+            .#{nth($breakpoint, 1)}-#{nth($tag, 1)}-#{nth($side, 1)}-#{nth($size, 1)} {
+              @if (nth($side, 1) == $all) {
+                #{$tag}: nth($size, 2);
+              }
+
+              @if (nth($side, 1) != $all) {
+                #{$tag}-#{$side}: nth($size, 2);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
