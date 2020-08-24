@@ -11,11 +11,13 @@ interface UiTulkitButtonProps extends UiTulkitElements {
   value?: string | number;
   name?: string;
   id?: string;
+  centered?: boolean;
   onClick?: (e?: MouseEvent<HTMLButtonElement>) => void;
 }
 
 const Button = styled.button<UiTulkitButtonProps>`
   ${(props: UiTulkitButtonProps) => props.fullWidth && `width: 100%;`};
+  ${(props: UiTulkitButtonProps) => props.centered && `margin: 0 auto;`};
   padding: 10px;
   cursor: pointer;
   border-radius: 3px;

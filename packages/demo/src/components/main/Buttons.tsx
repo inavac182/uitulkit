@@ -12,12 +12,24 @@ export const Buttons = () => {
       </UiTulkitHeading>
       <UiTulkitText>
         {' '}
-        Buttons everywhere!{' '}
+        Just A Button{' '}
         <span role="img" aria-label="nice emoji">
           💁🏻‍♂️
         </span>
       </UiTulkitText>
-      <UiTulkitButton className="all-margin-bottom-five"> Button </UiTulkitButton>
+      <UiTulkitButton className="all-margin-bottom-five" centered={true}>
+        {' '}
+        Button{' '}
+      </UiTulkitButton>
+      <UiTulkitSeparator />
+      <UiTulkitHeading level={2} separator="bottom" align="left">
+        Full Width
+      </UiTulkitHeading>
+      <UiTulkitButton className="all-margin-bottom-five" fullWidth={true}>
+        {' '}
+        Button{' '}
+      </UiTulkitButton>
+      <UiTulkitSeparator />
       <UiTulkitParagraph>
         <UiTulkitText>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vestibulum commodo dolor, ac iaculis nisl
