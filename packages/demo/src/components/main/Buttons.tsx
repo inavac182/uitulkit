@@ -17,7 +17,7 @@ export const Buttons = () => {
           💁🏻‍♂️
         </span>
       </UiTulkitText>
-      <UiTulkitButton className="margin-x"> Button </UiTulkitButton>
+      <UiTulkitButton className="all-margin-bottom-five"> Button </UiTulkitButton>
       <UiTulkitParagraph>
         <UiTulkitText>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vestibulum commodo dolor, ac iaculis nisl

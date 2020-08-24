@@ -14,22 +14,16 @@
     "clean": " rm -rf dist node_modules coverage",
     "eslint": "eslint ./src/**/*.ts --fix",
     "lint": "npm run tsc && npm run eslint",
-    "build-task:scss-compile": "node-sass-chokidar --source-map true src/scss/ -o dist/css",
-    "build-task:autoprefixer": "postcss dist/css/*.css --use autoprefixer -d dist/css",
-    "build:scss": "npm-run-all -p build-task:*",
+    "build:sass": "node-sass -r --output-style compressed ./src/scss/main.scss -o dist/css",
     "build:tsc": "tsc",
-    "watch:scss": "chokidar 'src/scss/**/*.scss' -c 'npm run build:scss'",
-    "watch:tcs": "tsc --watch",
+    "watch:tsc": "tsc --watch",
+    "watch:sass": "npm run build:sass -- -w",
     "watch": "npm-run-all -p watch:*",
     "tsc": "npm-run-all -p build:*"
   },
   "dependencies": {},
   "devDependencies": {
-    "autoprefixer": "^9.8.6",
-    "chokidar-cli": "^2.1.0",
     "node-sass": "^4.14.1",
-    "node-sass-chokidar": "^1.5.0",
-    "npm-run-all": "^4.1.5",
-    "postcss-cli": "^7.1.1"
+    "npm-run-all": "^4.1.5"
   }
 }
