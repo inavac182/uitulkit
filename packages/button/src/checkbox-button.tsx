@@ -4,7 +4,8 @@ import { faCheckSquare } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
 
 import { UiTulkitColsGrid, UiTulkitGridItem } from '@uitulkit/colsgrid';
-import { getValueFromTheme, ThemesCategories, ThemesCategoriesLevel, ThemeProp } from '@uitulkit/foundation';
+import { ThemesCategoriesLevel } from '@uitulkit/foundation';
+import { UiTulkitIconsWrapper } from '@uitulkit/icons-wrapper';
 
 import { Button } from '.';
 
@@ -15,16 +16,6 @@ interface UiTulkitCheckboxButtonProps {
   centered?: boolean;
   onChange?: (state?: boolean) => void;
 }
-
-interface UiTulkitIconWrapperProps {
-  themeCategorieLevel: ThemesCategoriesLevel;
-  theme?: ThemeProp;
-}
-
-const Div = styled.div`
-  ${(props: UiTulkitIconWrapperProps) =>
-    `color: ${getValueFromTheme(ThemesCategories.COLORS, props.themeCategorieLevel, props?.theme?.main)}`}
-`;
 
 export const UiTulkitCheckboxButton = (props: UiTulkitCheckboxButtonProps) => {
   const [checked, setChecked] = React.useState(props.defaultState || false);
@@ -41,9 +32,11 @@ export const UiTulkitCheckboxButton = (props: UiTulkitCheckboxButtonProps) => {
     <Button fullWidth={props.fullWidth} centered={props.centered} onClick={handleOnClick}>
       <UiTulkitColsGrid gridCols={4}>
         <UiTulkitGridItem colSpan={1} alignSelf="center">
-          <Div themeCategorieLevel={checked ? ThemesCategoriesLevel.CONTRAST : ThemesCategoriesLevel.SOFTBG}>
+          <UiTulkitIconsWrapper
+            themeCategorieLevel={checked ? ThemesCategoriesLevel.SOFTBG : ThemesCategoriesLevel.TEXT}
+          >
             <FontAwesomeIcon icon={faCheckSquare} />
-          </Div>
+          </UiTulkitIconsWrapper>
         </UiTulkitGridItem>
         <UiTulkitGridItem colSpan={3} alignSelf="center">
           {props.label}

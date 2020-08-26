@@ -12,6 +12,7 @@ module.exports = {
         'button',
         'card',
         'docs',
+        'icons-wrapper',
         'misc',
         'release',
         'themes',

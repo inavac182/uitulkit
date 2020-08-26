@@ -12,6 +12,7 @@
       "@uitulkit/list": ["list/src"],
       "@uitulkit/text": ["text/src"],
       "@uitulkit/view": ["view/src"],
+      "@uitulkit/icons-wrapper": ["icons-wrapper/src"],
       "@uitulkit/*": ["*/src"]
     }
   }
