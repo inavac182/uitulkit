@@ -7,8 +7,8 @@ export const Navbar = () => {
   return (
     <UiTulkitList>
       <UiTulkitListItem>
-        <UiTulkitLink to="/" external>
-          Home
+        <UiTulkitLink to="/" external={true}>
+          Home - (Full reload)
         </UiTulkitLink>
       </UiTulkitListItem>
       <UiTulkitListItem>
