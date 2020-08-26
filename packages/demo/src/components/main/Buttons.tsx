@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { UiTulkitHeading, UiTulkitText, UiTulkitParagraph } from '@uitulkit/text';
-import { UiTulkitButton, UiTulkitButtonsGroup } from '@uitulkit/button';
+import { UiTulkitButton, UiTulkitButtonsGroup, UiTulkitCheckboxButton } from '@uitulkit/button';
 import { UiTulkitSeparator } from '@uitulkit/view';
 
 export const Buttons = () => {
@@ -76,6 +76,8 @@ export const Buttons = () => {
           ante. Ut sit amet nisi eu leo convallis mollis. Maecenas nec sollicitudin dolor.
         </UiTulkitText>
       </UiTulkitParagraph>
+      <UiTulkitSeparator />
+      <UiTulkitCheckboxButton label="Checkbox" />
     </>
   );
 };
