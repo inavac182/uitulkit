@@ -9,12 +9,13 @@ export interface UiTulkitBaseButtonProps extends UiTulkitElements {
   name?: string;
   id?: string;
   centered?: boolean;
+  padding?: number;
 }
 
 export const Button = styled.button<UiTulkitBaseButtonProps>`
   ${(props: UiTulkitBaseButtonProps) => props.fullWidth && `width: 100%;`};
   ${(props: UiTulkitBaseButtonProps) => props.centered && `margin: 0 auto;`};
-  padding: 10px;
+  ${(props: UiTulkitBaseButtonProps) => (props.padding ? `padding: ${props.padding}px` : 'padding: 10px;')};
   cursor: pointer;
   border-radius: 3px;
   display: block;

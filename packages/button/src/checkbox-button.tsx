@@ -1,14 +1,14 @@
 import * as React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faCheckSquare } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
 
 import { UiTulkitColsGrid, UiTulkitGridItem } from '@uitulkit/colsgrid';
 import { getValueFromTheme, ThemesCategories, ThemesCategoriesLevel, ThemeProp } from '@uitulkit/foundation';
 
-import { UiTulkitBaseButtonProps, Button } from '.';
+import { Button } from '.';
 
-interface UiTulkitCheckboxButtonProps extends UiTulkitBaseButtonProps {
+interface UiTulkitCheckboxButtonProps {
   label: string;
   defaultState?: boolean;
   fullWidth?: boolean;
@@ -40,12 +40,14 @@ export const UiTulkitCheckboxButton = (props: UiTulkitCheckboxButtonProps) => {
   return (
     <Button fullWidth={props.fullWidth} centered={props.centered} onClick={handleOnClick}>
       <UiTulkitColsGrid gridCols={4}>
-        <UiTulkitGridItem colSpan={1}>
+        <UiTulkitGridItem colSpan={1} alignSelf="center">
           <Div themeCategorieLevel={checked ? ThemesCategoriesLevel.CONTRAST : ThemesCategoriesLevel.SOFTBG}>
-            <FontAwesomeIcon icon={faCheck} />
+            <FontAwesomeIcon icon={faCheckSquare} />
           </Div>
         </UiTulkitGridItem>
-        <UiTulkitGridItem colSpan={3}>{props.label}</UiTulkitGridItem>
+        <UiTulkitGridItem colSpan={3} alignSelf="center">
+          {props.label}
+        </UiTulkitGridItem>
       </UiTulkitColsGrid>
     </Button>
   );
