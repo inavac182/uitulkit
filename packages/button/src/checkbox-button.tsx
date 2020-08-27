@@ -15,6 +15,7 @@ interface UiTulkitCheckboxButtonProps {
   fullWidth?: boolean;
   centered?: boolean;
   onChange?: (state?: boolean) => void;
+  className?: string;
 }
 
 export const UiTulkitCheckboxButton = (props: UiTulkitCheckboxButtonProps) => {
@@ -29,7 +30,7 @@ export const UiTulkitCheckboxButton = (props: UiTulkitCheckboxButtonProps) => {
   }, [checked]);
 
   return (
-    <Button fullWidth={props.fullWidth} centered={props.centered} onClick={handleOnClick}>
+    <Button fullWidth={props.fullWidth} centered={props.centered} onClick={handleOnClick} className={props.className}>
       <UiTulkitColsGrid gridCols={4}>
         <UiTulkitGridItem colSpan={1} alignSelf="center">
           <UiTulkitIconsWrapper
@@ -38,7 +39,7 @@ export const UiTulkitCheckboxButton = (props: UiTulkitCheckboxButtonProps) => {
             <FontAwesomeIcon icon={faCheckSquare} />
           </UiTulkitIconsWrapper>
         </UiTulkitGridItem>
-        <UiTulkitGridItem colSpan={3} alignSelf="center">
+        <UiTulkitGridItem colSpan={3} alignSelf="center" justifySelf="start">
           {props.label}
         </UiTulkitGridItem>
       </UiTulkitColsGrid>

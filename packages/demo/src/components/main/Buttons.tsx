@@ -77,7 +77,39 @@ export const Buttons = () => {
         </UiTulkitText>
       </UiTulkitParagraph>
       <UiTulkitSeparator />
-      <UiTulkitCheckboxButton label="Checkbox" />
+      <UiTulkitHeading level={2} separator="bottom" align="left">
+        {' '}
+        Checkboxes{' '}
+      </UiTulkitHeading>
+      <UiTulkitCheckboxButton label="Checkbox" className="all-margin-bottom-five" />
+      <UiTulkitParagraph>
+        <UiTulkitText>
+          Vestibulum eget metus eu orci volutpat tempus. Fusce efficitur sed risus maximus fermentum. Maecenas
+          condimentum velit quis tellus ultricies, vitae facilisis augue fringilla. Nulla imperdiet pellentesque ligula,
+          eget convallis sem consectetur non. Ut eu mi varius, eleifend dolor a, sodales urna. Curabitur at eleifend
+          ante. Ut sit amet nisi eu leo convallis mollis. Maecenas nec sollicitudin dolor.
+        </UiTulkitText>
+      </UiTulkitParagraph>
+
+      <UiTulkitHeading level={2} separator="bottom" align="left">
+        {' '}
+        Checkboxes Group{' '}
+      </UiTulkitHeading>
+      <UiTulkitButtonsGroup type="bar" buttonsGap={10} className="all-margin-bottom-five">
+        <UiTulkitCheckboxButton label="Checkbox" />
+        <UiTulkitCheckboxButton label="Checkbox" />
+        <UiTulkitCheckboxButton label="Checkbox" />
+        <UiTulkitCheckboxButton label="Checkbox" />
+      </UiTulkitButtonsGroup>
+
+      <UiTulkitParagraph>
+        <UiTulkitText>
+          Vestibulum eget metus eu orci volutpat tempus. Fusce efficitur sed risus maximus fermentum. Maecenas
+          condimentum velit quis tellus ultricies, vitae facilisis augue fringilla. Nulla imperdiet pellentesque ligula,
+          eget convallis sem consectetur non. Ut eu mi varius, eleifend dolor a, sodales urna. Curabitur at eleifend
+          ante. Ut sit amet nisi eu leo convallis mollis. Maecenas nec sollicitudin dolor.
+        </UiTulkitText>
+      </UiTulkitParagraph>
     </>
   );
 };
