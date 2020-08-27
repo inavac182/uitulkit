@@ -1,6 +1,11 @@
 import { themes } from '.';
 
-export const getValueFromTheme = (category: string, level: string, selectedTheme = 'dark'): string => {
+export const getValueFromTheme = (
+  category: string,
+  level: string,
+  selectedTheme = 'dark',
+  innerLevel?: string
+): string => {
   const defaultColor = '#000000';
   const theme = themes[selectedTheme];
   const categorySelected = theme[category];
@@ -10,12 +15,18 @@ export const getValueFromTheme = (category: string, level: string, selectedTheme
     return defaultColor;
   }
 
-  const neededColor = categorySelected[level];
+  let color = '';
 
-  if (!neededColor) {
+  if (innerLevel) {
+    color = categorySelected[level][innerLevel];
+  } else {
+    color = categorySelected[level];
+  }
+
+  if (!color) {
     console.error("THEME DOESN'T HAVE SELECTED LEVEL ->", level);
     return defaultColor;
   }
 
-  return neededColor;
+  return color;
 };

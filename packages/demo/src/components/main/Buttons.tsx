@@ -22,6 +22,7 @@ export const Buttons = () => {
         Button{' '}
       </UiTulkitButton>
       <UiTulkitSeparator />
+
       <UiTulkitHeading level={2} separator="bottom" align="left">
         Full Width
       </UiTulkitHeading>
@@ -46,6 +47,7 @@ export const Buttons = () => {
         </UiTulkitText>
       </UiTulkitParagraph>
       <UiTulkitSeparator />
+
       <UiTulkitHeading level={2} separator="bottom" align="left">
         Buttons Group
       </UiTulkitHeading>
@@ -77,6 +79,7 @@ export const Buttons = () => {
         </UiTulkitText>
       </UiTulkitParagraph>
       <UiTulkitSeparator />
+
       <UiTulkitHeading level={2} separator="bottom" align="left">
         {' '}
         Checkboxes{' '}
@@ -110,6 +113,8 @@ export const Buttons = () => {
           ante. Ut sit amet nisi eu leo convallis mollis. Maecenas nec sollicitudin dolor.
         </UiTulkitText>
       </UiTulkitParagraph>
+
+      <UiTulkitSeparator />
     </>
   );
 };

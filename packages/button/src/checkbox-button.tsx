@@ -1,10 +1,9 @@
 import * as React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckSquare } from '@fortawesome/free-solid-svg-icons';
-import styled from 'styled-components';
 
 import { UiTulkitColsGrid, UiTulkitGridItem } from '@uitulkit/colsgrid';
-import { ThemesCategoriesLevel } from '@uitulkit/foundation';
+import { ThemesCategoriesLevel, ThemesCategoriesLevelActions } from '@uitulkit/foundation';
 import { UiTulkitIconsWrapper } from '@uitulkit/icons-wrapper';
 
 import { Button } from '.';
@@ -34,7 +33,10 @@ export const UiTulkitCheckboxButton = (props: UiTulkitCheckboxButtonProps) => {
       <UiTulkitColsGrid gridCols={4}>
         <UiTulkitGridItem colSpan={1} alignSelf="center">
           <UiTulkitIconsWrapper
-            themeCategorieLevel={checked ? ThemesCategoriesLevel.SOFTBG : ThemesCategoriesLevel.TEXT}
+            themeCategorieLevel={ThemesCategoriesLevel.ACTIONS}
+            themeCategorieLevelActions={
+              checked ? ThemesCategoriesLevelActions.SUCCESS : ThemesCategoriesLevelActions.DEFAULT
+            }
           >
             <FontAwesomeIcon icon={faCheckSquare} />
           </UiTulkitIconsWrapper>
