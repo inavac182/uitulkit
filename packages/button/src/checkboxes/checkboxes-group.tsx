@@ -40,8 +40,6 @@ export const UiTulkitCheckboxesGroup = (props: ButtonsGroupProps) => {
     },
   };
 
-  console.log('Render checkboxes group');
-
   if (type === 'bar') {
     return (
       <UiTulkitColsGrid gridCols={numberOfCheckboxes} colsGap={buttonsGap} className={className}>
