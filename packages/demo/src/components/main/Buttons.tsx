@@ -1,7 +1,12 @@
 import * as React from 'react';
 
 import { UiTulkitHeading, UiTulkitText, UiTulkitParagraph } from '@uitulkit/text';
-import { UiTulkitButton, UiTulkitButtonsGroup, UiTulkitCheckboxButton } from '@uitulkit/button';
+import {
+  UiTulkitButton,
+  UiTulkitButtonsGroup,
+  UiTulkitCheckboxButton,
+  UiTulkitCheckboxesGroup,
+} from '@uitulkit/button';
 import { UiTulkitSeparator } from '@uitulkit/view';
 
 export const Buttons = () => {
@@ -84,7 +89,7 @@ export const Buttons = () => {
         {' '}
         Checkboxes{' '}
       </UiTulkitHeading>
-      <UiTulkitCheckboxButton label="Checkbox" className="all-margin-bottom-five" />
+      <UiTulkitCheckboxButton label="Checkbox" className="all-margin-bottom-five" value="check" />
       <UiTulkitParagraph>
         <UiTulkitText>
           Vestibulum eget metus eu orci volutpat tempus. Fusce efficitur sed risus maximus fermentum. Maecenas
@@ -99,11 +104,33 @@ export const Buttons = () => {
         Checkboxes Group{' '}
       </UiTulkitHeading>
       <UiTulkitButtonsGroup type="bar" buttonsGap={10} className="all-margin-bottom-five">
-        <UiTulkitCheckboxButton label="Checkbox" />
-        <UiTulkitCheckboxButton label="Checkbox" />
-        <UiTulkitCheckboxButton label="Checkbox" />
-        <UiTulkitCheckboxButton label="Checkbox" />
+        <UiTulkitCheckboxButton label="Checkbox" value="check1" />
+        <UiTulkitCheckboxButton label="Checkbox" value="check2" />
+        <UiTulkitCheckboxButton label="Checkbox" value="check3" />
+        <UiTulkitCheckboxButton label="Checkbox" value="check4" />
       </UiTulkitButtonsGroup>
+
+      <UiTulkitParagraph>
+        <UiTulkitText>
+          Vestibulum eget metus eu orci volutpat tempus. Fusce efficitur sed risus maximus fermentum. Maecenas
+          condimentum velit quis tellus ultricies, vitae facilisis augue fringilla. Nulla imperdiet pellentesque ligula,
+          eget convallis sem consectetur non. Ut eu mi varius, eleifend dolor a, sodales urna. Curabitur at eleifend
+          ante. Ut sit amet nisi eu leo convallis mollis. Maecenas nec sollicitudin dolor.
+        </UiTulkitText>
+      </UiTulkitParagraph>
+
+      <UiTulkitSeparator />
+
+      <UiTulkitHeading level={2} separator="bottom" align="left">
+        {' '}
+        Checkboxes Controlled Group{' '}
+      </UiTulkitHeading>
+      <UiTulkitCheckboxesGroup type="bar" buttonsGap={10} controlled={true} className="all-margin-bottom-five">
+        <UiTulkitCheckboxButton label="Checkbox" value="" />
+        <UiTulkitCheckboxButton label="Checkbox" value="" />
+        <UiTulkitCheckboxButton label="Checkbox" value="" />
+        <UiTulkitCheckboxButton label="Checkbox" value="" />
+      </UiTulkitCheckboxesGroup>
 
       <UiTulkitParagraph>
         <UiTulkitText>
