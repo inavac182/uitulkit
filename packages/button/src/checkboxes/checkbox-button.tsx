@@ -18,7 +18,7 @@ interface UiTulkitCheckboxButtonProps {
   fullWidth?: boolean;
   centered?: boolean;
   className?: string;
-  onChange?: (value: string | number, index?: number) => void;
+  onChange?: (value: string | number, state?: boolean, index?: number) => void;
 }
 
 export const UiTulkitCheckboxButton = (props: UiTulkitCheckboxButtonProps) => {
@@ -26,15 +26,16 @@ export const UiTulkitCheckboxButton = (props: UiTulkitCheckboxButtonProps) => {
   const { onChange, controlled, index, value, defaultState, fullWidth, centered, className, label } = props;
 
   const handleOnClick = React.useCallback(() => {
+    const newState = !checked;
     if (!controlled) {
-      setChecked(!checked);
+      setChecked(newState);
     }
 
     if (onChange) {
       if (controlled) {
-        onChange(value, index);
+        onChange(value, newState, index);
       } else {
-        onChange(value);
+        onChange(value, newState);
       }
     }
   }, [checked, controlled]);

@@ -28,13 +28,15 @@ export const UiTulkitCheckboxesGroup = (props: ButtonsGroupProps) => {
   const numberOfCheckboxes = Object.keys(children).length;
   const childProps = {
     controlled,
-    onChange: (value: number | string, index: number) => {
-      setSelectedCheckbox(index);
+    onChange: (value: number | string, checked: boolean, index: number) => {
+      const newIndex = checked ? index : -1;
+      const newValue = checked ? value : '';
+      setSelectedCheckbox(newIndex);
 
       if (onChange) {
         onChange({
-          index,
-          value,
+          index: newIndex,
+          value: newValue,
         });
       }
     },

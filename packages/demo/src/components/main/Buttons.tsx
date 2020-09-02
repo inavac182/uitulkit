@@ -104,10 +104,38 @@ export const Buttons = () => {
         Checkboxes Group{' '}
       </UiTulkitHeading>
       <UiTulkitButtonsGroup type="bar" buttonsGap={10} className="all-margin-bottom-five">
-        <UiTulkitCheckboxButton label="Checkbox" value="check1" />
-        <UiTulkitCheckboxButton label="Checkbox" value="check2" />
-        <UiTulkitCheckboxButton label="Checkbox" value="check3" />
-        <UiTulkitCheckboxButton label="Checkbox" value="check4" />
+        <UiTulkitCheckboxButton
+          label="Checkbox"
+          value="check1"
+          onChange={(value, state) => {
+            console.log(value);
+            console.log(state);
+          }}
+        />
+        <UiTulkitCheckboxButton
+          label="Checkbox"
+          value="check2"
+          onChange={(value, state) => {
+            console.log(value);
+            console.log(state);
+          }}
+        />
+        <UiTulkitCheckboxButton
+          label="Checkbox"
+          value="check3"
+          onChange={(value, state) => {
+            console.log(value);
+            console.log(state);
+          }}
+        />
+        <UiTulkitCheckboxButton
+          label="Checkbox"
+          value="check4"
+          onChange={(value, state) => {
+            console.log(value);
+            console.log(state);
+          }}
+        />
       </UiTulkitButtonsGroup>
 
       <UiTulkitParagraph>
@@ -125,11 +153,19 @@ export const Buttons = () => {
         {' '}
         Checkboxes Controlled Group{' '}
       </UiTulkitHeading>
-      <UiTulkitCheckboxesGroup type="bar" buttonsGap={10} controlled={true} className="all-margin-bottom-five">
-        <UiTulkitCheckboxButton label="Checkbox" value="" />
-        <UiTulkitCheckboxButton label="Checkbox" value="" />
-        <UiTulkitCheckboxButton label="Checkbox" value="" />
-        <UiTulkitCheckboxButton label="Checkbox" value="" />
+      <UiTulkitCheckboxesGroup
+        type="bar"
+        buttonsGap={10}
+        controlled={true}
+        onChange={(value) => {
+          console.log(value);
+        }}
+        className="all-margin-bottom-five"
+      >
+        <UiTulkitCheckboxButton label="Checkbox" value="check1" />
+        <UiTulkitCheckboxButton label="Checkbox" value="check2" />
+        <UiTulkitCheckboxButton label="Checkbox" value="check3" />
+        <UiTulkitCheckboxButton label="Checkbox" value="check4" />
       </UiTulkitCheckboxesGroup>
 
       <UiTulkitParagraph>
