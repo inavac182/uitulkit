@@ -11,17 +11,22 @@ module.exports = {
       [
         'button',
         'card',
+        'checkbox',
+        'chore',
+        'colsgrid',
+        'config',
+        'demo',
         'docs',
-        'icons-wrapper',
-        'misc',
+        'flexgrid',
+        'foundation',
+        'icon',
+        'input',
+        'list',
         'release',
         'themes',
-        'grid',
-        'foundation',
-        'demo',
-        'view',
+        'table',
         'text',
-        'list'
+        'view',
       ]
     ]
   }
