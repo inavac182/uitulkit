@@ -87,7 +87,7 @@ export const Buttons = () => {
 
       <UiTulkitHeading level={2} separator="bottom" align="left">
         {' '}
-        Checkboxes{' '}
+        Button Checkboxes{' '}
       </UiTulkitHeading>
       <UiTulkitCheckboxButton label="Checkbox" className="all-margin-bottom-five" value="check" />
       <UiTulkitParagraph>
@@ -101,7 +101,7 @@ export const Buttons = () => {
 
       <UiTulkitHeading level={2} separator="bottom" align="left">
         {' '}
-        Checkboxes Group{' '}
+        Button Checkboxes Group{' '}
       </UiTulkitHeading>
       <UiTulkitButtonsGroup type="bar" buttonsGap={10} className="all-margin-bottom-five">
         <UiTulkitCheckboxButton
