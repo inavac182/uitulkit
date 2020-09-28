@@ -4,9 +4,8 @@ import { faCheckSquare } from '@fortawesome/free-solid-svg-icons';
 
 import { UiTulkitColsGrid, UiTulkitGridItem } from '@uitulkit/colsgrid';
 import { ThemesCategoriesLevel, ThemesCategoriesLevelActions } from '@uitulkit/foundation';
-import { UiTulkitIconsWrapper } from '@uitulkit/icons-wrapper';
-
-import { Button } from '../';
+import { UiTulkitIconsWrapper } from '@uitulkit/icon';
+import { UiTulkitButton } from '@uitulkit/button';
 
 interface UiTulkitCheckboxButtonProps {
   label: string;
@@ -54,7 +53,7 @@ export const UiTulkitCheckboxButton = (props: UiTulkitCheckboxButtonProps) => {
   }
 
   return (
-    <Button
+    <UiTulkitButton
       fullWidth={fullWidth}
       centered={centered}
       key={index}
@@ -75,6 +74,6 @@ export const UiTulkitCheckboxButton = (props: UiTulkitCheckboxButtonProps) => {
           {label}
         </UiTulkitGridItem>
       </UiTulkitColsGrid>
-    </Button>
+    </UiTulkitButton>
   );
 };

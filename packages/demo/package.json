@@ -12,6 +12,9 @@
     "@uitulkit/list": "^0.1.0",
     "@uitulkit/text": "^0.1.0",
     "@uitulkit/view": "^0.1.0",
+    "@uitulkit/table": "^0.1.0",
+    "@uitulkit/input": "^0.1.0",
+    "@uitulkit/checkbox": "^0.1.0",
     "styled-components": "^5.1.1"
   },
   "scripts": {

@@ -1,13 +1,9 @@
 import * as React from 'react';
 
 import { UiTulkitHeading, UiTulkitText, UiTulkitParagraph } from '@uitulkit/text';
-import {
-  UiTulkitButton,
-  UiTulkitButtonsGroup,
-  UiTulkitCheckboxButton,
-  UiTulkitCheckboxesGroup,
-} from '@uitulkit/button';
+import { UiTulkitButton, UiTulkitButtonsGroup } from '@uitulkit/button';
 import { UiTulkitSeparator } from '@uitulkit/view';
+import { UiTulkitCheckboxButton, UiTulkitCheckboxesGroup } from '@uitulkit/checkbox';
 
 export const Buttons = () => {
   return (

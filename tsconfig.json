@@ -16,7 +16,7 @@
       "@uitulkit/dropdown": ["dropdown/src"],
       "@uitulkit/input": ["input/src"],
       "@uitulkit/table": ["table/src"],
-      "@uitulkit/icons-wrapper": ["icons-wrapper/src"],
+      "@uitulkit/icon": ["icon/src"],
       "@uitulkit/*": ["*/src"]
     }
   }
