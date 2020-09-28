@@ -162,7 +162,7 @@ export const Buttons = () => {
         }}
         className="all-margin-bottom-five"
       >
-        <UiTulkitCheckboxButton label="Checkbox" value="check1" />
+        <UiTulkitCheckboxButton label="Checkbox" value="check1" disabled={true} />
         <UiTulkitCheckboxButton label="Checkbox" value="check2" />
         <UiTulkitCheckboxButton label="Checkbox" value="check3" />
         <UiTulkitCheckboxButton label="Checkbox" value="check4" />

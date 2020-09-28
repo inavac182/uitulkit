@@ -28,7 +28,7 @@ const AppWrapper = () => {
   return (
     <Router history={history}>
       <ThemeProvider theme={{ main: theme }}>
-        <UiTulkitView className="App" centered>
+        <UiTulkitView className="App" centered={true}>
           <Header />
           <UiTulkitColsGrid gridCols={{ s: 1, m: 1, l: 10 }} className="grid-big">
             <Viewport breakpoint={Breakpoints.LARGE}>

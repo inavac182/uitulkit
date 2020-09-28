@@ -11,6 +11,7 @@ import { Button } from '../';
 interface UiTulkitCheckboxButtonProps {
   label: string;
   value: number | string;
+  disabled?: boolean;
   index?: number;
   key?: number;
   defaultState?: boolean;
@@ -23,7 +24,7 @@ interface UiTulkitCheckboxButtonProps {
 
 export const UiTulkitCheckboxButton = (props: UiTulkitCheckboxButtonProps) => {
   const [checked, setChecked] = React.useState(props.defaultState);
-  const { onChange, controlled, index, value, defaultState, fullWidth, centered, className, label } = props;
+  const { onChange, controlled, index, value, defaultState, fullWidth, centered, className, label, disabled } = props;
 
   const handleOnClick = React.useCallback(() => {
     const newState = !checked;
@@ -53,7 +54,14 @@ export const UiTulkitCheckboxButton = (props: UiTulkitCheckboxButtonProps) => {
   }
 
   return (
-    <Button fullWidth={fullWidth} centered={centered} key={index} onClick={handleOnClick} className={className}>
+    <Button
+      fullWidth={fullWidth}
+      centered={centered}
+      key={index}
+      onClick={handleOnClick}
+      className={className}
+      disabled={disabled}
+    >
       <UiTulkitColsGrid gridCols={4} colsGap={5}>
         <UiTulkitGridItem colSpan={1} alignSelf="center">
           <UiTulkitIconsWrapper

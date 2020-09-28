@@ -10,6 +10,7 @@ export interface UiTulkitBaseButtonProps extends UiTulkitElements {
   id?: string;
   centered?: boolean;
   padding?: number;
+  disabled?: boolean;
 }
 
 export const Button = styled.button<UiTulkitBaseButtonProps>`
@@ -32,6 +33,10 @@ export const Button = styled.button<UiTulkitBaseButtonProps>`
   }
   &:active {
     background-color: ${(props: UiTulkitBaseButtonProps) =>
+      getValueFromTheme(ThemesCategories.COLORS, ThemesCategoriesLevel.SOFTBG, props?.theme?.main)};
+  }
+  &:disabled {
+    background: ${(props: UiTulkitBaseButtonProps) =>
       getValueFromTheme(ThemesCategories.COLORS, ThemesCategoriesLevel.SOFTBG, props?.theme?.main)};
   }
 `;
