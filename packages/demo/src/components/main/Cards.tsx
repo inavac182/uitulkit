@@ -31,6 +31,14 @@ export const Cards = () => {
         imageHeight="200px"
         image="https://pix10.agoda.net/hotelImages/301716/-1/fe9724d8fb4da3dd4590353bd771a276.jpg?s=1024x768"
       />
+      <UiTulkitHeading
+        level={2}
+        separator="bottom"
+        align="left"
+        className="all-margin-top-twenty all-margin-bottom-twenty"
+      >
+        Actionable Cards
+      </UiTulkitHeading>
       <UiTulkitColsGrid gridCols={3} colsGap={10} className="all-margin-top-ten">
         <UiTulkitGridItem>
           <UiTulkitCard
