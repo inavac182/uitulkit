@@ -1,26 +1,34 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { UiTulkitHeading, UiTulkitText } from '@uitulkit/text';
-
 import { UiTulkitCardProps } from '.';
-import { CardDiv, CardImageDiv } from './helpers';
+import { CardContent } from './helpers';
 
-const CardContentDiv = styled.div`
-  padding-left: 10px;
-  padding-right: 10px;
+const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
+
+const ALink = styled.a`
+  text-decoration: none;
 `;
 
 export const UiTulkitCard = (props: UiTulkitCardProps) => {
-  const { text, textAlign, image, imageHeight, className, header, headerLevel } = props;
+  const { link, externalLink } = props;
 
   return (
-    <CardDiv textAlign={textAlign} className={className}>
-      {image && <CardImageDiv image={image} imageHeight={imageHeight} />}
-      <CardContentDiv>
-        {header && <UiTulkitHeading level={headerLevel || 1}>{header}</UiTulkitHeading>}
-        <UiTulkitText>{text}</UiTulkitText>
-      </CardContentDiv>
-    </CardDiv>
+    <>
+      {link && (
+        <StyledLink to={link}>
+          <CardContent {...props} />
+        </StyledLink>
+      )}
+      {externalLink && (
+        <ALink href={externalLink}>
+          <CardContent {...props} />
+        </ALink>
+      )}
+      {!link && !externalLink && <CardContent {...props} />}
+    </>
   );
 };

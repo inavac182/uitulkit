@@ -3,6 +3,8 @@ import { UiTulkitHeadingLevelType } from '@uitulkit/text';
 
 export interface UiTulkitCardProps extends UiTulkitElements {
   children?: React.ReactNode;
+  onClick?: (identifier?: string) => void;
+  identifier?: string;
   text?: string;
   theme?: ThemeProp;
   textAlign?: 'left' | 'right' | 'center';
@@ -11,4 +13,7 @@ export interface UiTulkitCardProps extends UiTulkitElements {
   header?: string;
   className?: string;
   headerLevel?: UiTulkitHeadingLevelType;
+  link?: string;
+  externalLink?: string;
+  extendHeight?: boolean;
 }

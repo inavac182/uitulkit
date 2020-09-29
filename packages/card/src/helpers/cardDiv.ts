@@ -4,14 +4,15 @@ import { ThemesCategoriesLevel, ThemesCategories, getValueFromTheme } from '@uit
 import { UiTulkitCardProps } from '../types';
 
 export const CardDiv = styled.div<UiTulkitCardProps>`
-  width: 100%;
   border-radius: 3px;
 
   ${(props: UiTulkitCardProps) => {
     return `
       background: ${getValueFromTheme(ThemesCategories.COLORS, ThemesCategoriesLevel.MAIN, props?.theme?.main)};
       color:${getValueFromTheme(ThemesCategories.COLORS, ThemesCategoriesLevel.TEXT, props?.theme?.main)};
-      border: 2px solid ${getValueFromTheme(ThemesCategories.COLORS, ThemesCategoriesLevel.SOFTBG, props?.theme?.main)};
-      text-align: ${props.textAlign || 'left'}`;
+      border: 1px solid ${getValueFromTheme(ThemesCategories.COLORS, ThemesCategoriesLevel.SOFTBG, props?.theme?.main)};
+      text-align: ${props?.textAlign || 'left'};
+      ${props.onClick !== undefined ? 'cursor: pointer;' : ''}
+      ${props.extendHeight && 'height: 99%;'}`;
   }}
 `;
