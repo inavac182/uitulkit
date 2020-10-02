@@ -39,3 +39,5 @@ export const UiTulkitView = (props: UiTulkitViewProps) => {
 
   return <FullScreenDiv {...props}>{props.children}</FullScreenDiv>;
 };
+
+UiTulkitView.displayName = 'UiTulkitView';

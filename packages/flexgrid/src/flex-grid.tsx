@@ -36,3 +36,5 @@ const Div = styled.div<DivProps>`
 export const UiTulkitFlexGrid = (props: UiTulkitFlexGridProps) => {
   return <Div {...props}>{props.children}</Div>;
 };
+
+UiTulkitFlexGrid.displayName = 'UiTulkitFlexGrid';

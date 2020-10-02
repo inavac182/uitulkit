@@ -60,3 +60,5 @@ export const UiTulkitCheckboxesGroup = (props: ButtonsGroupProps) => {
     </UiTulkitColsGrid>
   );
 };
+
+UiTulkitCheckboxesGroup.displayName = 'UiTulkitCheckboxesGroup';

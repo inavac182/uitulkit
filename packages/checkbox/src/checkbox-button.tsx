@@ -77,3 +77,5 @@ export const UiTulkitCheckboxButton = (props: UiTulkitCheckboxButtonProps) => {
     </UiTulkitButton>
   );
 };
+
+UiTulkitCheckboxButton.displayName = 'UiTulkitCheckboxButton';

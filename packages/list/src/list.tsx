@@ -18,3 +18,5 @@ const List = styled.ul<UiTulkitListProps>`
 export const UiTulkitList = (props: UiTulkitListProps) => {
   return <List {...props}>{props.children}</List>;
 };
+
+UiTulkitList.displayName = 'UiTulkitList';

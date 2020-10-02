@@ -53,3 +53,5 @@ const Div = styled.div<DivProps>`
 export const UiTulkitColsGrid = (props: UiTulkitColsGridProps) => {
   return <Div {...props}>{props.children}</Div>;
 };
+
+UiTulkitColsGrid.displayName = 'UiTulkitColsGrid';

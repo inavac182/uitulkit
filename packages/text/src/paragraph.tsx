@@ -21,3 +21,5 @@ const DivParagraph = styled.div`
 export const UiTulkitParagraph = (props: UiTulkitParagraphProps) => {
   return <DivParagraph {...props}>{props.children}</DivParagraph>;
 };
+
+UiTulkitParagraph.displayName = 'UiTulkitParagraph';

@@ -31,3 +31,5 @@ export const UiTulkitLink = (props: UiTulkitTextProps) => {
     return <StyledLink to={props.to}>{props.children}</StyledLink>;
   }
 };
+
+UiTulkitLink.displayName = 'UiTulkitLink';

@@ -52,3 +52,5 @@ const Div = styled.div<DivProps>`
 `;
 
 export const UiTulkitFlexItem = (props: UiTulkitFlexItemProps) => <Div {...props}>{props.children}</Div>;
+
+UiTulkitFlexItem.displayName = 'UiTulkitFlexItem';

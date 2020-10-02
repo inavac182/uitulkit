@@ -30,3 +30,5 @@ export const Viewport = ({ children, breakpoint, breakpoints }: ViewportProps) =
 
   return <></>;
 };
+
+Viewport.displayName = 'Viewport';

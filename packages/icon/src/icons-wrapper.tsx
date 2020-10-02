@@ -30,3 +30,5 @@ const Span = styled.span`
 export const UiTulkitIconsWrapper = (props: UiTulkitIconsWrapperProps) => {
   return <Span {...props}>{props.children}</Span>;
 };
+
+UiTulkitIconsWrapper.displayName = 'UiTulkitIconsWrapper';

@@ -20,3 +20,5 @@ const SeparatorDiv = styled.div<UiTulkitSeparatorProps>`
 export const UiTulkitSeparator = (props: UiTulkitSeparatorProps) => {
   return <SeparatorDiv {...props} />;
 };
+
+UiTulkitSeparator.displayName = 'UiTulkitSeparator';

@@ -13,3 +13,5 @@ const ListItem = styled.li`
 export const UiTulkitListItem = (props: UiTulkitListProps) => {
   return <ListItem {...props}>{props.children}</ListItem>;
 };
+
+UiTulkitListItem.displayName = 'UiTulkitListItem';

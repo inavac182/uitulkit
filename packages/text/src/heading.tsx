@@ -60,3 +60,5 @@ export const UiTulkitHeading = (props: UiTulkitHeadingProps) => {
       return <HeadingH1 {...props}>{props.children}</HeadingH1>;
   }
 };
+
+UiTulkitHeading.displayName = 'UiTulkitHeading';

@@ -31,3 +31,5 @@ const Div = styled.div<DivProps>`
 export const UiTulkitGridItem = (props: UiTulkitGridItemProps) => {
   return <Div {...props}>{props.children}</Div>;
 };
+
+UiTulkitGridItem.displayName = 'UiTulkitGridItem';

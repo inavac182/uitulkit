@@ -11,3 +11,5 @@ interface UiTulkitButtonProps extends UiTulkitBaseButtonProps {
 export const UiTulkitButton = (props: UiTulkitButtonProps) => {
   return <Button {...props}>{props?.children}</Button>;
 };
+
+UiTulkitButton.displayName = 'UiTulkitButton';

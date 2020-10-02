@@ -46,3 +46,5 @@ export const UiTulkitButtonsGroup = (props: ButtonsGroupProps) => {
     </>
   );
 };
+
+UiTulkitButtonsGroup.displayName = 'UiTulkitButtonsGroup';

@@ -14,3 +14,5 @@ const Paragrah = styled.p`
 export const UiTulkitText = (props: UiTulkitTextProps) => {
   return <Paragrah {...props}>{props.children}</Paragrah>;
 };
+
+UiTulkitText.displayName = 'UiTulkitText';
