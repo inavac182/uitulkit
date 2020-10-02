@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { UiTulkitCardProps } from '.';
-import { CardContent } from './helpers';
+import { CardWrapper } from './wrappers';
 
 const StyledLink = styled(Link)`
   text-decoration: none;
@@ -20,15 +20,17 @@ export const UiTulkitCard = (props: UiTulkitCardProps) => {
     <>
       {link && (
         <StyledLink to={link}>
-          <CardContent {...props} />
+          <CardWrapper {...props} />
         </StyledLink>
       )}
       {externalLink && (
         <ALink href={externalLink}>
-          <CardContent {...props} />
+          <CardWrapper {...props} />
         </ALink>
       )}
-      {!link && !externalLink && <CardContent {...props} />}
+      {!link && !externalLink && <CardWrapper {...props} />}
     </>
   );
 };
+
+UiTulkitCard.displayName = 'UiTulkitCard';

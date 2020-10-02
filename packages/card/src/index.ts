@@ -1,2 +1,2 @@
-export * from './card';
+export * from './UiTulkitCard';
 export * from './types';

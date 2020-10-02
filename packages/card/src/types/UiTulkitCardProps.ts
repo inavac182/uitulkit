@@ -1,19 +1,15 @@
-import { ThemeProp, UiTulkitElements } from '@uitulkit/foundation';
-import { UiTulkitHeadingLevelType } from '@uitulkit/text';
+import { UiTulkitElements } from '@uitulkit/foundation';
 
 export interface UiTulkitCardProps extends UiTulkitElements {
-  children?: React.ReactNode;
-  onClick?: (identifier?: string) => void;
-  identifier?: string;
-  text?: string;
-  theme?: ThemeProp;
-  textAlign?: 'left' | 'right' | 'center';
-  image?: string;
-  imageHeight?: string;
-  header?: string;
   className?: string;
-  headerLevel?: UiTulkitHeadingLevelType;
-  link?: string;
+  content?: React.ReactNode;
   externalLink?: string;
   extendHeight?: boolean;
+  footer?: React.ReactNode;
+  header?: React.ReactNode;
+  identifier?: string;
+  image?: string;
+  imageHeight?: string;
+  link?: string;
+  onClick?: (identifier?: string) => void;
 }

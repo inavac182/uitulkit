@@ -3,10 +3,8 @@ import { UiTulkitHeading } from '@uitulkit/text';
 
 export const Header = () => {
   return (
-    <div>
-      <UiTulkitHeading level={1} inline={true}>
-        @UiTulkit
-      </UiTulkitHeading>
-    </div>
+    <UiTulkitHeading level={1} align="center">
+      @UiTulkit
+    </UiTulkitHeading>
   );
 };
